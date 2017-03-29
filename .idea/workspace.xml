@@ -29,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/src/PathFindingOnSquaredGrid.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="629">
-              <caret line="96" column="39" selection-start-line="96" selection-start-column="39" selection-end-line="96" selection-end-column="39" />
+              <caret line="218" column="25" selection-start-line="218" selection-start-column="25" selection-end-line="218" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -706,7 +706,7 @@
       <workItem from="1490542687702" duration="1903000" />
       <workItem from="1490625050057" duration="3175000" />
       <workItem from="1490714607264" duration="636000" />
-      <workItem from="1490787548083" duration="23651000" />
+      <workItem from="1490787548083" duration="23705000" />
     </task>
     <task id="LOCAL-00001" summary="change colors&#10;">
       <created>1490818993439</created>
@@ -764,11 +764,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490819307404</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="display cordinants in the generated squares">
+      <created>1490819360386</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1490819360386</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38715000" />
+    <option name="totallyTimeSpent" value="38769000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -821,7 +828,8 @@
     <MESSAGE value="done with asking what method to calculate the distance" />
     <MESSAGE value="complete dijkstar class" />
     <MESSAGE value="add a variable to change the grid size easily" />
-    <option name="LAST_COMMIT_MESSAGE" value="add a variable to change the grid size easily" />
+    <MESSAGE value="display cordinants in the generated squares" />
+    <option name="LAST_COMMIT_MESSAGE" value="display cordinants in the generated squares" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -922,7 +930,7 @@
     <entry file="file://$PROJECT_DIR$/src/PathFindingOnSquaredGrid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
-          <caret line="96" column="39" selection-start-line="96" selection-start-column="39" selection-end-line="96" selection-end-column="39" />
+          <caret line="218" column="25" selection-start-line="218" selection-start-column="25" selection-end-line="218" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

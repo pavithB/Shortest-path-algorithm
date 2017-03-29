@@ -195,7 +195,7 @@ public class PathFindingOnSquaredGrid {
         for (Dijkstra.Node node : path) {
 
             try {
-                TimeUnit.MILLISECONDS.sleep(150);
+                TimeUnit.MILLISECONDS.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -208,13 +208,15 @@ public class PathFindingOnSquaredGrid {
 
 //                StdDraw.filledSquare(node.y, 10 - node.x - 1, .5);
 
-                StdDraw.setPenRadius(0.02);
+                StdDraw.setPenRadius(0.01);
                 StdDraw.line( prey ,nValue - prex -1, node.y ,nValue- node.x -1 );
+
                 prey=node.y;
                 prex=node.x;
 
             }
         }
+        StdDraw.text(prex, nValue-i-1, "("+i+","+j+")");
 
 /*
 
