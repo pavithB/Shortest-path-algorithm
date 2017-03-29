@@ -13,6 +13,8 @@ import java.util.concurrent.TimeUnit;
 
 public class PathFindingOnSquaredGrid {
 
+    static final int nValue = 200;
+
     // given an N-by-N matrix of open cells, return an N-by-N matrix
     // of cells reachable from the top
     public static boolean[][] flow(boolean[][] open) {
@@ -135,7 +137,7 @@ public class PathFindingOnSquaredGrid {
     	
     	// The following will generate a 10x10 squared grid with relatively few obstacles in it
     	// The lower the second parameter, the more obstacles (black cells) are generated
-    	boolean[][] randomlyGenMatrix = random(100, 0.8);
+    	boolean[][] randomlyGenMatrix = random(nValue, 0.8);
     	
     	StdArrayIO.print(randomlyGenMatrix);
     	show(randomlyGenMatrix, true);
@@ -206,8 +208,8 @@ public class PathFindingOnSquaredGrid {
 
 //                StdDraw.filledSquare(node.y, 10 - node.x - 1, .5);
 
-                StdDraw.setPenRadius(0.005);
-                StdDraw.line( prey ,100 - prex -1, node.y ,100- node.x -1 );
+                StdDraw.setPenRadius(0.05);
+                StdDraw.line( prey ,nValue - prex -1, node.y ,nValue- node.x -1 );
                 prey=node.y;
                 prex=node.x;
 
