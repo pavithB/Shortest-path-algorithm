@@ -112,7 +112,7 @@ public class PathFindingOnSquaredGrid {
                 	if ((i == x1 && j == y1) ||(i == x2 && j == y2)) {
                         StdDraw.setPenColor(StdDraw.RED);
                 		StdDraw.filledCircle(j, N-i-1, .5);
-
+                        StdDraw.setPenColor(StdDraw.BLACK);
                 	}
                 	else StdDraw.square(j, N-i-1, .5);
                 else StdDraw.filledSquare(j, N-i-1, .5);
@@ -135,7 +135,7 @@ public class PathFindingOnSquaredGrid {
     	
     	// The following will generate a 10x10 squared grid with relatively few obstacles in it
     	// The lower the second parameter, the more obstacles (black cells) are generated
-    	boolean[][] randomlyGenMatrix = random(50, 0.8);
+    	boolean[][] randomlyGenMatrix = random(100, 0.8);
     	
     	StdArrayIO.print(randomlyGenMatrix);
     	show(randomlyGenMatrix, true);
@@ -207,7 +207,7 @@ public class PathFindingOnSquaredGrid {
 //                StdDraw.filledSquare(node.y, 10 - node.x - 1, .5);
 
                 StdDraw.setPenRadius(0.005);
-                StdDraw.line( prey ,50 - prex -1, node.y ,50- node.x -1 );
+                StdDraw.line( prey ,100 - prex -1, node.y ,100- node.x -1 );
                 prey=node.y;
                 prex=node.x;
 
