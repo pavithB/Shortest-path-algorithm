@@ -215,8 +215,9 @@ public class Dijkstra {
             }
 
         } else System.out.println("No possible path");
-        System.out.println("********************************************************************************************************");
-        System.out.println(fcost);
+        System.out.println("******************************************************************************************************************");
+        System.out.println("\n\t\t\tT O T A L _ C O S T : " + fcost);
+        System.out.println("\n******************************************************************************************************************");
 //        StdDraw.setPenColor(Color.black);
 //        StdDraw.text(end.x, 10-end.y-1, "cost="+(int)fcost);
         return path;
