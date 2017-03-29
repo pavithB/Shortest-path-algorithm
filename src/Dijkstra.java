@@ -49,7 +49,13 @@ public class Dijkstra {
 
         switch (choice){
             case 1:
-                bre
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            default:
+
         }
 
 
