@@ -216,7 +216,7 @@ public class PathFindingOnSquaredGrid {
 
             }
         }
-        StdDraw.text(prex, nValue-i-1, "("+i+","+j+")");
+
 
 /*
 
