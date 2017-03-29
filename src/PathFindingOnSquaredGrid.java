@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 public class PathFindingOnSquaredGrid {
 
-    static final int nValue = 200;
+    static final int nValue = 10;
 
     // given an N-by-N matrix of open cells, return an N-by-N matrix
     // of cells reachable from the top
@@ -93,7 +93,7 @@ public class PathFindingOnSquaredGrid {
         for (int i = 0; i < N; i++)
             for (int j = 0; j < N; j++)
                 if (a[i][j] == which) {
-//                    StdDraw.text(j, N-i-1, "("+i+","+j+")");
+                    StdDraw.text(j, N-i-1, "("+i+","+j+")");
                     StdDraw.square(j, N - i - 1, .5);
 
                 }else StdDraw.filledSquare(j, N-i-1, .5);
@@ -208,7 +208,7 @@ public class PathFindingOnSquaredGrid {
 
 //                StdDraw.filledSquare(node.y, 10 - node.x - 1, .5);
 
-                StdDraw.setPenRadius(0.05);
+                StdDraw.setPenRadius(0.02);
                 StdDraw.line( prey ,nValue - prex -1, node.y ,nValue- node.x -1 );
                 prey=node.y;
                 prex=node.x;

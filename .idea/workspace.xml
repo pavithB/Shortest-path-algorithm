@@ -29,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/src/PathFindingOnSquaredGrid.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="629">
-              <caret line="210" column="40" selection-start-line="210" selection-start-column="40" selection-end-line="210" selection-end-column="40" />
+              <caret line="96" column="39" selection-start-line="96" selection-start-column="39" selection-end-line="96" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -706,7 +706,7 @@
       <workItem from="1490542687702" duration="1903000" />
       <workItem from="1490625050057" duration="3175000" />
       <workItem from="1490714607264" duration="636000" />
-      <workItem from="1490787548083" duration="23621000" />
+      <workItem from="1490787548083" duration="23651000" />
     </task>
     <task id="LOCAL-00001" summary="change colors&#10;">
       <created>1490818993439</created>
@@ -757,11 +757,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490819227928</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add a variable to change the grid size easily">
+      <created>1490819307404</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1490819307404</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38685000" />
+    <option name="totallyTimeSpent" value="38715000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -813,7 +820,8 @@
     <MESSAGE value="fix error while calculating distnce" />
     <MESSAGE value="done with asking what method to calculate the distance" />
     <MESSAGE value="complete dijkstar class" />
-    <option name="LAST_COMMIT_MESSAGE" value="complete dijkstar class" />
+    <MESSAGE value="add a variable to change the grid size easily" />
+    <option name="LAST_COMMIT_MESSAGE" value="add a variable to change the grid size easily" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -914,7 +922,7 @@
     <entry file="file://$PROJECT_DIR$/src/PathFindingOnSquaredGrid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
-          <caret line="210" column="40" selection-start-line="210" selection-start-column="40" selection-end-line="210" selection-end-column="40" />
+          <caret line="96" column="39" selection-start-line="96" selection-start-column="39" selection-end-line="96" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
