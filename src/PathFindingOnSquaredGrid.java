@@ -110,9 +110,8 @@ public class PathFindingOnSquaredGrid {
             for (int j = 0; j < N; j++)
                 if (a[i][j] == which)
                 	if ((i == x1 && j == y1) ||(i == x2 && j == y2)) {
-                        StdDraw.setPenColor(StdDraw.);
+                        StdDraw.setPenColor(StdDraw.RED);
                 		StdDraw.filledCircle(j, N-i-1, .5);
-
 
                 	}
                 	else StdDraw.square(j, N-i-1, .5);
