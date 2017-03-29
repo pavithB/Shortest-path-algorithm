@@ -13,10 +13,10 @@ public class Dijkstra {
     double fcost;
 
     // Horizontal and VerticalDistance
-//    double hVDistance = 1.0;
+//    double normalDistance = 1.0;
 
     // Diagonal Distance
-//    double dDistance = 1.4;
+//    double diagonalDistance = 1.4;
 
    /* for Manhattan Distances,
     double horizontalVerticalDistance = 1.0;
@@ -27,8 +27,8 @@ public class Dijkstra {
     double diagonalDistance = 1.0; */
 
 
-    double dDistance ;
-    double hVDistance ;
+    double diagonalDistance ;
+    double normalDistance ;
 
 
     /**
@@ -42,23 +42,23 @@ public class Dijkstra {
      */
     ArrayList<Node> distance(boolean[][] matrix, int si, int sj, int ei, int ej) {
 
-
-        System.out.println("Chose a method \n\t 1)Euclidean distance \n\t2)Manhattan distance\n\t3)Chebyshev distance\n");
+        System.out.println("******************************************************************************************************************");
+        System.out.println("Chose a metrics for calculating the distance \n\n\t\t1)Euclidean distance \n\t\t2)Manhattan distance\n\t\t3)Chebyshev distance\n");
         Scanner sc = new Scanner(System.in);
         String choice = sc.next();
 
         switch (choice){
             case "1":
-                 dDistance = 1.4;
-                 hVDistance = 1.0;
+                 diagonalDistance = 1.4;
+                 normalDistance = 1.0;
                 break;
             case "2":
-                 dDistance = 1.0;
-                 dDistance = 2.0;
+                 diagonalDistance = 1.0;
+                normalDistance = 1.0;
                 break;
             case "3":
-                 dDistance = 1.0;
-                 dDistance = 1.0;
+                 diagonalDistance = 1.0;
+                 diagonalDistance = 1.0;
                 break;
             default:
 
@@ -118,8 +118,8 @@ public class Dijkstra {
 
                 // Top Top
                 t = gridArea[current.x - 1][current.y];
-                if (!t.visited && !t.blocked && t.distance > current.distance + hVDistance) {
-                    t.distance = current.distance + hVDistance;
+                if (!t.visited && !t.blocked && t.distance > current.distance + normalDistance) {
+                    t.distance = current.distance + normalDistance;
                     t.parent = current;
                     queueB.add(t);
                 }
@@ -127,8 +127,8 @@ public class Dijkstra {
                 // Top Left
                 if (current.y - 1 > 0) {
                     t = gridArea[current.x - 1][current.y - 1];
-                    if (!t.visited && !t.blocked && t.distance > current.distance + dDistance) {
-                        t.distance = current.distance + dDistance;
+                    if (!t.visited && !t.blocked && t.distance > current.distance + diagonalDistance) {
+                        t.distance = current.distance + diagonalDistance;
                         t.parent = current;
                         queueB.add(t);
                     }
@@ -137,8 +137,8 @@ public class Dijkstra {
                 // Top Right
                 if (current.y + 1 < size) {
                     t = gridArea[current.x - 1][current.y + 1];
-                    if (!t.visited && !t.blocked && t.distance > current.distance + dDistance) {
-                        t.distance = current.distance + dDistance;
+                    if (!t.visited && !t.blocked && t.distance > current.distance + diagonalDistance) {
+                        t.distance = current.distance + diagonalDistance;
                         t.parent = current;
                         queueB.add(t);
                     }
@@ -148,8 +148,8 @@ public class Dijkstra {
             // Left
             if (current.y - 1 > 0) {
                 t = gridArea[current.x][current.y - 1];
-                if (!t.visited && !t.blocked && t.distance > current.distance + hVDistance) {
-                    t.distance = current.distance + hVDistance;
+                if (!t.visited && !t.blocked && t.distance > current.distance + normalDistance) {
+                    t.distance = current.distance + normalDistance;
                     t.parent = current;
                     queueB.add(t);
                 }
@@ -158,8 +158,8 @@ public class Dijkstra {
             // Right
             if (current.y + 1 < size) {
                 t = gridArea[current.x][current.y + 1];
-                if (!t.visited && !t.blocked && t.distance > current.distance + hVDistance) {
-                    t.distance = current.distance + hVDistance;
+                if (!t.visited && !t.blocked && t.distance > current.distance + normalDistance) {
+                    t.distance = current.distance + normalDistance;
                     t.parent = current;
                     queueB.add(t);
                 }
@@ -169,8 +169,8 @@ public class Dijkstra {
 
                 // Down Down
                 t = gridArea[current.x + 1][current.y];
-                if (!t.visited && !t.blocked && t.distance > current.distance + hVDistance) {
-                    t.distance = current.distance + hVDistance;
+                if (!t.visited && !t.blocked && t.distance > current.distance + normalDistance) {
+                    t.distance = current.distance + normalDistance;
                     t.parent = current;
                     queueB.add(t);
                 }
@@ -178,8 +178,8 @@ public class Dijkstra {
                 // Down Left
                 if (current.y - 1 >= 0) {
                     t = gridArea[current.x + 1][current.y - 1];
-                    if (!t.visited && !t.blocked && t.distance > current.distance + dDistance) {
-                        t.distance = current.distance + dDistance;
+                    if (!t.visited && !t.blocked && t.distance > current.distance + diagonalDistance) {
+                        t.distance = current.distance + diagonalDistance;
                         t.parent = current;
                         queueB.add(t);
                     }
@@ -188,8 +188,8 @@ public class Dijkstra {
                 // Down Right
                 if (current.y + 1 < size) {
                     t = gridArea[current.x + 1][current.y + 1];
-                    if (!t.visited && !t.blocked && t.distance > current.distance + dDistance) {
-                        t.distance = current.distance + dDistance;
+                    if (!t.visited && !t.blocked && t.distance > current.distance + diagonalDistance) {
+                        t.distance = current.distance + diagonalDistance;
                         t.parent = current;
                         queueB.add(t);
                     }
