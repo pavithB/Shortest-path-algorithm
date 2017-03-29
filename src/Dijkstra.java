@@ -27,8 +27,8 @@ public class Dijkstra {
     double diagonalDistance = 1.0; */
 
 
-    double dDistance = 1.4;
-    double hVDistance = 1.0;
+    double dDistance ;
+    double hVDistance ;
 
 
     /**
@@ -45,17 +45,24 @@ public class Dijkstra {
 
         System.out.println("Chose a method \n\t 1)Euclidean distance \n\t2)Manhattan distance\n\t3)Chebyshev distance\n");
         Scanner sc = new Scanner(System.in);
-        int choice = sc.nextInt();
+        String choice = sc.next();
 
         switch (choice){
-            case 1:
+            case "1":
+                 dDistance = 1.4;
+                 hVDistance = 1.0;
                 break;
-            case 2:
+            case "2":
+                 dDistance = 1.0;
+                 dDistance = 2.0;
                 break;
-            case 3:
+            case "3":
+                 dDistance = 1.0;
+                 dDistance = 1.0;
                 break;
             default:
 
+                break;
         }
 
 
