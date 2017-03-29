@@ -43,7 +43,7 @@ public class Dijkstra {
     ArrayList<Node> distance(boolean[][] matrix, int si, int sj, int ei, int ej) {
 
         System.out.println("******************************************************************************************************************");
-        System.out.println("Chose a metrics for calculating the distance \n\n\t\t1)Euclidean distance \n\t\t2)Manhattan distance\n\t\t3)Chebyshev distance\n");
+        System.out.println("\n\nChose a metrics for calculating the distance \n\n\t\t1)Euclidean distance \n\t\t2)Manhattan distance\n\t\t3)Chebyshev distance\n");
         Scanner sc = new Scanner(System.in);
         String choice = sc.next();
 
@@ -53,12 +53,12 @@ public class Dijkstra {
                  normalDistance = 1.0;
                 break;
             case "2":
-                 diagonalDistance = 1.0;
+                 diagonalDistance = 2.0;
                 normalDistance = 1.0;
                 break;
             case "3":
                  diagonalDistance = 1.0;
-                 diagonalDistance = 1.0;
+                normalDistance = 1.0;
                 break;
             default:
 
@@ -215,7 +215,7 @@ public class Dijkstra {
             }
 
         } else System.out.println("No possible path");
-
+        System.out.println("********************************************************************************************************");
         System.out.println(fcost);
 //        StdDraw.setPenColor(Color.black);
 //        StdDraw.text(end.x, 10-end.y-1, "cost="+(int)fcost);
