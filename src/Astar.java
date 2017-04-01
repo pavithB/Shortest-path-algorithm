@@ -17,7 +17,7 @@ public class Astar {
     Node[][] nodeGrid;
 
 
-    int z;
+//    int z;
 
     double pathCost =0;
     double diagonalDistance;
