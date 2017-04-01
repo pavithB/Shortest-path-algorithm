@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 public class PathFindingOnSquaredGrid {
 
     static final int nValue = 10;
-    static final double ratio = 0.6;
+    static final double ratio = 0.8;
 
     // given an N-by-N matrix of open cells, return an N-by-N matrix
     // of cells reachable from the top
@@ -96,7 +96,7 @@ public class PathFindingOnSquaredGrid {
         for (int i = 0; i < N; i++)
             for (int j = 0; j < N; j++)
                 if (a[i][j] == which) {
-//                    StdDraw.text(j, N-i-1, "("+i+","+j+")");
+                    StdDraw.text(j, N-i-1, "("+i+","+j+")");
                     StdDraw.square(j, N - i - 1, .5);
 
                 }else StdDraw.filledSquare(j, N-i-1, .5);
@@ -136,6 +136,10 @@ public class PathFindingOnSquaredGrid {
 
     // test client
     public static void main(String[] args) {
+
+
+        while(true) {
+
         // boolean[][] open = StdArrayIO.readBoolean2D();
 
         // The following will generate a 10x10 squared grid with relatively few obstacles in it
@@ -159,93 +163,160 @@ public class PathFindingOnSquaredGrid {
         // You should position this command accordingly in order to perform the algorithmic analysis
 
 
-        Scanner in = new Scanner(System.in);
-        System.out.println("Enter i for A > ");
-        int Ai = in.nextInt();
-
-        System.out.println("Enter j for A > ");
-        int Aj = in.nextInt();
-
-        System.out.println("Enter i for B > ");
-        int Bi = in.nextInt();
-
-        System.out.println("Enter j for B > ");
-        int Bj = in.nextInt();
-
-        // THIS IS AN EXAMPLE ONLY ON HOW TO USE THE JAVA INTERNAL WATCH
-        // Stop the clock ticking in order to capture the time being spent on inputting the coordinates
-        // You should position this command accordingly in order to perform the algorithmic analysis
 
 
-        // System.out.println("Coordinates for A: [" + Ai + "," + Aj + "]");
-        // System.out.println("Coordinates for B: [" + Bi + "," + Bj + "]");
 
-        show(randomlyGenMatrix, true, Ai, Aj, Bi, Bj);
-        Stopwatch timerFlow = new Stopwatch();
 
-        Astar testing = new Astar();
 
-        ArrayList<Node> path = testing.ShortestPath(randomlyGenMatrix, Ai, Aj, Bi, Bj);
+            Scanner in = new Scanner(System.in);
+            System.out.println("Enter i for A > ");
+            int Ai = in.nextInt();
+
+            System.out.println("Enter j for A > ");
+            int Aj = in.nextInt();
+
+            System.out.println("Enter i for B > ");
+            int Bi = in.nextInt();
+
+            System.out.println("Enter j for B > ");
+            int Bj = in.nextInt();
+
+            // THIS IS AN EXAMPLE ONLY ON HOW TO USE THE JAVA INTERNAL WATCH
+            // Stop the clock ticking in order to capture the time being spent on inputting the coordinates
+            // You should position this command accordingly in order to perform the algorithmic analysis
+
+
+            // System.out.println("Coordinates for A: [" + Ai + "," + Aj + "]");
+            // System.out.println("Coordinates for B: [" + Bi + "," + Bj + "]");
+
+            show(randomlyGenMatrix, true, Ai, Aj, Bi, Bj);
+            Stopwatch timerFlow = new Stopwatch();
+
+            Astar testing = new Astar();
+
+            ArrayList<Node> path = testing.ShortestPath(randomlyGenMatrix, Ai, Aj, Bi, Bj);
 //        ArrayList<Node> path = new Astar().ShortestPath(randomlyGenMatrix, Ai, Aj, Bi, Bj);
-        StdOut.println("time to find the shortest path  = " + timerFlow.elapsedTime());
-        ArrayList<Node>    testarray = testing.testing();
-        StdDraw.setPenColor(Color.RED);
+            StdOut.println("time to find the shortest path  = " + timerFlow.elapsedTime());
+            ArrayList<Node> testarray = testing.testing();
+            StdDraw.setPenColor(Color.BLUE);
 
-        int i = 0;
-        int prex=0 ;
-        int prey=0;
+            int i = 0;
+            int prex = 0;
+            int prey = 0;
 
-        Collections.reverse(path);
+            Collections.reverse(path);
 
-        for(Node dd : testarray){
-            StdDraw.filledSquare(dd.getJ(), 10 - dd.getI() - 1, .5);
-        }
+            for (Node dd : testarray) {
 
-        for (Node node : path) {
+                try {
+                    TimeUnit.MILLISECONDS.sleep(10);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
 
-            try {
-                TimeUnit.MILLISECONDS.sleep(500);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+                StdDraw.filledSquare(dd.getJ(), nValue - dd.getI() - 1, .5);
             }
+            StdDraw.setPenColor(Color.RED);
+            for (Node node : path) {
 
-            if (i == 0) {
-                i++;
-                prey=node.getJ();
-                prex=node.getI();
-            } else {
+                try {
+                    TimeUnit.MILLISECONDS.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+                if (i == 0) {
+                    i++;
+                    prey = node.getJ();
+                    prex = node.getI();
+                } else {
 
 //                StdDraw.filledSquare(node.y, 10 - node.x - 1, .5);
 
-                StdDraw.setPenRadius(0.01);
-                StdDraw.line( prey ,nValue - prex -1, node.getJ() ,nValue- node.getI() -1 );
+                    StdDraw.setPenRadius(0.01);
+                    StdDraw.line(prey, nValue - prex - 1, node.getJ(), nValue - node.getI() - 1);
 
-                prey=node.getJ();
-                prex=node.getI();
+                    prey = node.getJ();
+                    prex = node.getI();
 
+                }
             }
-        }
 
+            System.out.println("\n\n\tpress 0 to exit ");
 
-/*
+            System.out.println("\n\n\tpress 0 natuwa wena ekk to continue ");
 
-        public static void drawLine(int ai , int aj , int bi , int bj , int N , List<Node> nodes){
-
-            StdDraw.setXscale(-1,N);
-            StdDraw.setYscale(-1,N);
-
-            for(Node node : nodes){
-
-                StdDraw.setPenRadius(0.01);
-                StdDraw.setPenColor(StdDraw.RED);
-                //StdDraw.line( aj , N-ai-1 , bj , N-bi-1 );
-                StdDraw.line( node.getParent().getY() ,N - node.getParent().getX() -1, node.getY() ,N- node.getX() -1 );
-                StdDraw.setPenColor(StdDraw.BLACK);
-
+            String commnd = in.next();
+            StdDraw.clear();
+            if (commnd.equals("0")){
+                System.exit(0);
             }
 
         }
-        */
+
+/**        this for find shortest path using dijkstar algorithm + visualization
+ *
+ *            Dijkstra testing = new Dijkstra();
+
+ ArrayList<Dijkstra.Node> path = testing.distance(randomlyGenMatrix, Ai, Aj, Bi, Bj);
+ //        ArrayList<Node> path = new Astar().ShortestPath(randomlyGenMatrix, Ai, Aj, Bi, Bj);
+ StdOut.println("time to find the shortest path  = " + timerFlow.elapsedTime());
+ ArrayList<Dijkstra.Node> testarray = testing.testing();
+ StdDraw.setPenColor(Color.BLUE);
+
+ int i = 0;
+ int prex = 0;
+ int prey = 0;
+
+ Collections.reverse(path);
+
+ for (Dijkstra.Node dd : testarray) {
+
+ try {
+ TimeUnit.MILLISECONDS.sleep(10);
+ } catch (InterruptedException e) {
+ e.printStackTrace();
+ }
+
+ StdDraw.filledSquare(dd.getJ(), nValue - dd.getI() - 1, .5);
+ }
+ StdDraw.setPenColor(Color.RED);
+ for (Dijkstra.Node node : path) {
+
+ try {
+ TimeUnit.MILLISECONDS.sleep(100);
+ } catch (InterruptedException e) {
+ e.printStackTrace();
+ }
+
+ if (i == 0) {
+ i++;
+ prey = node.getJ();
+ prex = node.getI();
+ } else {
+
+ //                StdDraw.filledSquare(node.y, 10 - node.x - 1, .5);
+
+ StdDraw.setPenRadius(0.01);
+ StdDraw.line(prey, nValue - prex - 1, node.getJ(), nValue - node.getI() - 1);
+
+ prey = node.getJ();
+ prex = node.getI();
+
+ }
+ }
+
+ System.out.println("\n\n\tpress 0 to exit ");
+
+ System.out.println("\n\n\tpress 0 natuwa wena ekk to continue ");
+
+ String commnd = in.next();
+ StdDraw.clear();
+ if (commnd.equals("0")){
+ System.exit(0);
+ }
+
+ */
 
     }
 

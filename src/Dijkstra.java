@@ -12,6 +12,8 @@ public class Dijkstra {
 
     double fcost;
 
+    ArrayList<Node> test = new ArrayList<Node>();
+
     // Horizontal and VerticalDistance
 //    double normalDistance = 1.0;
 
@@ -122,6 +124,7 @@ public class Dijkstra {
                     t.distance = current.distance + normalDistance;
                     t.parent = current;
                     queueB.add(t);
+                    test.add(t);
                 }
 
                 // Top Left
@@ -131,6 +134,7 @@ public class Dijkstra {
                         t.distance = current.distance + diagonalDistance;
                         t.parent = current;
                         queueB.add(t);
+                        test.add(t);
                     }
                 }
 
@@ -141,6 +145,7 @@ public class Dijkstra {
                         t.distance = current.distance + diagonalDistance;
                         t.parent = current;
                         queueB.add(t);
+                        test.add(t);
                     }
                 }
             }
@@ -152,6 +157,7 @@ public class Dijkstra {
                     t.distance = current.distance + normalDistance;
                     t.parent = current;
                     queueB.add(t);
+                    test.add(t);
                 }
             }
 
@@ -162,6 +168,7 @@ public class Dijkstra {
                     t.distance = current.distance + normalDistance;
                     t.parent = current;
                     queueB.add(t);
+                    test.add(t);
                 }
             }
             // Down
@@ -173,6 +180,7 @@ public class Dijkstra {
                     t.distance = current.distance + normalDistance;
                     t.parent = current;
                     queueB.add(t);
+                    test.add(t);
                 }
 
                 // Down Left
@@ -182,6 +190,7 @@ public class Dijkstra {
                         t.distance = current.distance + diagonalDistance;
                         t.parent = current;
                         queueB.add(t);
+                        test.add(t);
                     }
                 }
 
@@ -192,6 +201,7 @@ public class Dijkstra {
                         t.distance = current.distance + diagonalDistance;
                         t.parent = current;
                         queueB.add(t);
+                        test.add(t);
                     }
                 }
             }
@@ -221,6 +231,14 @@ public class Dijkstra {
 //        StdDraw.setPenColor(Color.black);
 //        StdDraw.text(end.x, 10-end.y-1, "cost="+(int)fcost);
         return path;
+
+    }
+
+
+
+    public ArrayList<Node> testing(){
+        return test;
+
     }
 
 
@@ -235,6 +253,19 @@ public class Dijkstra {
         public Node(int x, int y) {
             this.x = x;
             this.y = y;
+
         }
-    }
+            public int getI() {
+                return x;
+            }
+
+
+            public int getJ() {
+                return y;
+            }
+
+
+
+        }
+
 }
