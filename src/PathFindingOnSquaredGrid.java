@@ -5,8 +5,10 @@ import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 /*************************************************************************
- *  Author: Dr E Kapetanios
+ *  Original Author: Dr E Kapetanios
  *  Last update: 22-02-2017
+ *
+ *  Editor: S.G.V.P.B.Gunasekara
  *
  *************************************************************************/
 
