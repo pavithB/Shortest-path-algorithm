@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * Created by Pavith Buddhima on 3/31/2017.
@@ -19,20 +16,50 @@ public class Astar {
     Node end;
     Node[][] nodeGrid;
 
+
     int z;
 
-
-    double diagonalDistance=1.4;
-    double normalDistance =1.0;
+    double pathCost =0;
+    double diagonalDistance;
+    double normalDistance ;
 
     boolean isfound =false;
+    boolean isManhattan = true;
 
 
 
     public ArrayList<Node> ShortestPath(boolean[][] matrix, int si, int sj, int ei, int ej){
 
 
+
+        System.out.println("******************************************************************************************************************");
+        System.out.println("\n\nChose a metrics for calculating the distance \n\n\t\t1)Euclidean distance \n\t\t2)Manhattan distance\n\t\t3)Chebyshev distance\n");
+        Scanner sc = new Scanner(System.in);
+        String choice = sc.next();
+
+        switch (choice){
+            case "1":
+                diagonalDistance = 1.4;
+                normalDistance = 1.0;
+                break;
+            case "2":
+                diagonalDistance = 2.0;
+                normalDistance = 1.0;
+                isManhattan=false;
+                break;
+            case "3":
+                diagonalDistance = 1.0;
+                normalDistance = 1.0;
+                break;
+            default:
+
+                break;
+        }
+
+
         int size = matrix.length;
+
+
 
         start = new Node(si, sj);
         end = new Node(ei, ej);
@@ -40,6 +67,7 @@ public class Astar {
         // The grid that is used to store nodes
 
         nodeGrid = new Node[size][size];
+
 
 
         // Creating nodes and finding blocked cells in matrix and mapping accordingly to our grid
@@ -133,49 +161,52 @@ public class Astar {
                     test.add(temp);
                 }
 
-                // Top Left
-                if (current.getJ() - 1 > 0) {
-                    temp = nodeGrid[current.getI() - 1][current.getJ() - 1];
-                    if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + diagonalDistance) {
+                if(isManhattan) {
 
-                        double tempg = current.getgValue() + diagonalDistance;
+                    // Top Left
+                    if (current.getJ() - 1 > 0) {
+                        temp = nodeGrid[current.getI() - 1][current.getJ() - 1];
+                        if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + diagonalDistance) {
 
-                        temp.setgValue(tempg);
+                            double tempg = current.getgValue() + diagonalDistance;
 
-                        int di =  Math.abs(temp.getI() - end.getI());
-                        int dj =  Math.abs(temp.getJ() - end.getJ());
+                            temp.setgValue(tempg);
 
-                        double temph = 1 * (di+dj);
+                            int di = Math.abs(temp.getI() - end.getI());
+                            int dj = Math.abs(temp.getJ() - end.getJ());
 
-                        temp.sethValue(temph);
-                        temp.setfValue(tempg+temph);
+                            double temph = 1 * (di + dj);
 
-                        temp.parent = current;
-                        openList.add(temp);
-                        test.add(temp);
+                            temp.sethValue(temph);
+                            temp.setfValue(tempg + temph);
+
+                            temp.parent = current;
+                            openList.add(temp);
+                            test.add(temp);
+                        }
                     }
-                }
 
-                // Top Right
-                if (current.getJ() + 1 < size) {
-                    temp = nodeGrid[current.getI() - 1][current.getJ() + 1];
-                    if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + diagonalDistance) {
+                    // Top Right
+                    if (current.getJ() + 1 < size) {
+                        temp = nodeGrid[current.getI() - 1][current.getJ() + 1];
+                        if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + diagonalDistance) {
 
-                        double tempg = current.getgValue() + diagonalDistance;
+                            double tempg = current.getgValue() + diagonalDistance;
 
-                        temp.setgValue(tempg);
+                            temp.setgValue(tempg);
 
-                        int di =  Math.abs(temp.getI() - end.getI());
-                        int dj =  Math.abs(temp.getJ() - end.getJ());
+                            int di = Math.abs(temp.getI() - end.getI());
+                            int dj = Math.abs(temp.getJ() - end.getJ());
 
-                        double temph = 1 * (di+dj);
+                            double temph = 1 * (di + dj);
 
-                        temp.sethValue(temph);
-                        temp.setfValue(tempg+temph);
+                            temp.sethValue(temph);
+                            temp.setfValue(tempg + temph);
 
-                        temp.parent = current;
-                        openList.add(temp);
-                        test.add(temp);
+                            temp.parent = current;
+                            openList.add(temp);
+                            test.add(temp);
+                        }
                     }
                 }
             }
@@ -249,54 +280,55 @@ public class Astar {
                     test.add(temp);
                 }
 
-                // Down Left
-                if (current.getJ() - 1 >= 0) {
-                    temp = nodeGrid[current.getI() + 1][current.getJ() - 1];
-                    if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + diagonalDistance) {
 
-                        double tempg = current.getgValue() + diagonalDistance;
+                if(isManhattan) {
+                    // Down Left
+                    if (current.getJ() - 1 >= 0) {
+                        temp = nodeGrid[current.getI() + 1][current.getJ() - 1];
+                        if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + diagonalDistance) {
 
-                        temp.setgValue(tempg);
+                            double tempg = current.getgValue() + diagonalDistance;
 
-                        int di =  Math.abs(temp.getI() - end.getI());
-                        int dj =  Math.abs(temp.getJ() - end.getJ());
+                            temp.setgValue(tempg);
 
-                        double temph = 1 * (di+dj);
+                            int di = Math.abs(temp.getI() - end.getI());
+                            int dj = Math.abs(temp.getJ() - end.getJ());
 
-                        temp.sethValue(temph);
-                        temp.setfValue(tempg+temph);
+                            double temph = 1 * (di + dj);
 
-                        temp.parent = current;
-                        openList.add(temp);
-                        test.add(temp);
+                            temp.sethValue(temph);
+                            temp.setfValue(tempg + temph);
+
+                            temp.parent = current;
+                            openList.add(temp);
+                            test.add(temp);
+                        }
                     }
-                }
 
-                // Down Right
-                if (current.getJ() + 1 < size) {
-                    temp = nodeGrid[current.getI() + 1][current.getJ()+ 1];
-                    if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + diagonalDistance) {
+                    // Down Right
+                    if (current.getJ() + 1 < size) {
+                        temp = nodeGrid[current.getI() + 1][current.getJ() + 1];
+                        if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + diagonalDistance) {
 
-                        double tempg = current.getgValue() + diagonalDistance;
+                            double tempg = current.getgValue() + diagonalDistance;
 
-                        temp.setgValue(tempg);
+                            temp.setgValue(tempg);
 
-                        int di =  Math.abs(temp.getI() - end.getI());
-                        int dj =  Math.abs(temp.getJ() - end.getJ());
+                            int di = Math.abs(temp.getI() - end.getI());
+                            int dj = Math.abs(temp.getJ() - end.getJ());
 
-                        double temph = 1 * (di+dj);
+                            double temph = 1 * (di + dj);
 
-                        temp.sethValue(temph);
-                        temp.setfValue(tempg+temph);
+                            temp.sethValue(temph);
+                            temp.setfValue(tempg + temph);
 
-                        temp.parent = current;
-                        openList.add(temp);
-                        test.add(temp);
+                            temp.parent = current;
+                            openList.add(temp);
+                            test.add(temp);
+                        }
                     }
                 }
             }
-            System.out.println(z);
-            z++;
 
             current.visited = true;
             closedList.add(current);
@@ -319,7 +351,7 @@ public class Astar {
             //Trace back the path
             Node current = nodeGrid[end.getI()][end.getJ()];
             path.add(current);
-//            fcost= fcost+current.distance;
+            pathCost= pathCost+current.getgValue();
 
             while (current.parent != null) {
                 path.add(current.parent);
@@ -330,7 +362,7 @@ public class Astar {
 
         } else System.out.println("No possible path");
         System.out.println("******************************************************************************************************************");
-//        System.out.println("\n\t\t\tT O T A L _ C O S T : " + fcost);
+        System.out.println("\n\t\t\tT O T A L _ C O S T : " + pathCost);
         System.out.println("\n******************************************************************************************************************");
 //        StdDraw.setPenColor(Color.black);
 //        StdDraw.text(end.x, 10-end.y-1, "cost="+(int)fcost);
