@@ -95,7 +95,7 @@ public class Astar {
 //        temp.setfValue(temphstart);
         openList.add(start);
 
-        while (!isfound) {
+        while (openList.size() > 0) {
 
 
 
