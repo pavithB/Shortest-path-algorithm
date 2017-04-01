@@ -8,8 +8,8 @@ import java.util.Queue;
  */
 public class Astar {
 
-    static ArrayList<Node> openList = new ArrayList<Node>();
-    static ArrayList<Node> closedList = new ArrayList<Node>();
+     ArrayList<Node> openList = new ArrayList<Node>();
+     ArrayList<Node> closedList = new ArrayList<Node>();
 
     Node current ;
     Node temp;
@@ -18,12 +18,14 @@ public class Astar {
     Node[][] nodeGrid;
 
 
-    double diagonalDistance=1.4 ;
+    double diagonalDistance=1.4;
     double normalDistance =1.0;
 
+    boolean isfound =false;
 
 
-    public void ShortestPath(boolean[][] matrix, int si, int sj, int ei, int ej){
+
+    public ArrayList<Node> ShortestPath(boolean[][] matrix, int si, int sj, int ei, int ej){
 
 
         int size = matrix.length;
@@ -34,6 +36,7 @@ public class Astar {
         // The grid that is used to store nodes
 
         nodeGrid = new Node[size][size];
+
 
         // Creating nodes and finding blocked cells in matrix and mapping accordingly to our grid
 
@@ -270,11 +273,21 @@ public class Astar {
                 }
             }
 
-             closedList.add(current);
+
             current.visited = true;
+            closedList.add(current);
+            if(current.gethValue()==0){
+                isfound=true;
+                break;
+            }
         }
 
 
+        if(!isfound){
+            System.out.println("No possible path");
+//            closedList.clear();
+        }
+        return closedList;
 
     }
 

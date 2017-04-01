@@ -182,7 +182,7 @@ public class PathFindingOnSquaredGrid {
         Stopwatch timerFlow = new Stopwatch();
 
 
-        ArrayList<Dijkstra.Node> path = new Dijkstra().distance(randomlyGenMatrix, Ai, Aj, Bi, Bj);
+        ArrayList<Node> path = new Astar().ShortestPath(randomlyGenMatrix, Ai, Aj, Bi, Bj);
         StdOut.println("time to find the shortest path  = " + timerFlow.elapsedTime());
 
         StdDraw.setPenColor(Color.RED);
@@ -193,7 +193,7 @@ public class PathFindingOnSquaredGrid {
 
         Collections.reverse(path);
 
-        for (Dijkstra.Node node : path) {
+        for (Node node : path) {
 
             try {
                 TimeUnit.MILLISECONDS.sleep(100);
@@ -203,17 +203,17 @@ public class PathFindingOnSquaredGrid {
 
             if (i == 0) {
                 i++;
-                prey=node.y;
-                prex=node.x;
+                prey=node.getJ();
+                prex=node.getI();
             } else {
 
 //                StdDraw.filledSquare(node.y, 10 - node.x - 1, .5);
 
                 StdDraw.setPenRadius(0.01);
-                StdDraw.line( prey ,nValue - prex -1, node.y ,nValue- node.x -1 );
+                StdDraw.line( prey ,nValue - prex -1, node.getJ() ,nValue- node.getI() -1 );
 
-                prey=node.y;
-                prex=node.x;
+                prey=node.getJ();
+                prex=node.getI();
 
             }
         }
