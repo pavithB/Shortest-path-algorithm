@@ -17,6 +17,8 @@ public class Astar {
     Node end;
     Node[][] nodeGrid;
 
+    int z;
+
 
     double diagonalDistance=1.4;
     double normalDistance =1.0;
@@ -80,9 +82,20 @@ public class Astar {
         // Queue to store visiting nodes
         Queue<Node> openList = new PriorityQueue<>(size, adjacencyComparator);
 
+
+
+
+
+//        int distart = Math.abs(si - ei);
+//        int djstart = Math.abs(sj - ej);
+//
+//        double temphstart = 1 * (distart+djstart);
+//
+//        temp.sethValue(temphstart);
+//        temp.setfValue(temphstart);
         openList.add(start);
 
-        while (openList.size() > 0) {
+        while (!isfound) {
 
 
 
@@ -99,14 +112,14 @@ public class Astar {
 
                 // Top Top
                 temp = nodeGrid[current.getI() - 1][current.getJ()];
-                if (!temp.visited && !temp.blocked && temp.fValue > current.getfValue() + normalDistance) {
+                if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + normalDistance) {
 
                     double tempg = current.getgValue() + normalDistance;
 
                     temp.setgValue(tempg);
 
-                    int di = temp.getI() - end.getI();
-                    int dj = temp.getJ() - end.getJ();
+                    int di =  Math.abs(temp.getI() - end.getI());
+                    int dj =  Math.abs(temp.getJ() - end.getJ());
 
                     double temph = 1 * (di+dj);
 
@@ -120,14 +133,14 @@ public class Astar {
                 // Top Left
                 if (current.getJ() - 1 > 0) {
                     temp = nodeGrid[current.getI() - 1][current.getJ() - 1];
-                    if (!temp.visited && !temp.blocked && temp.fValue > current.getfValue() + diagonalDistance) {
+                    if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + diagonalDistance) {
 
                         double tempg = current.getgValue() + diagonalDistance;
 
                         temp.setgValue(tempg);
 
-                        int di = temp.getI() - end.getI();
-                        int dj = temp.getJ() - end.getJ();
+                        int di =  Math.abs(temp.getI() - end.getI());
+                        int dj =  Math.abs(temp.getJ() - end.getJ());
 
                         double temph = 1 * (di+dj);
 
@@ -142,14 +155,14 @@ public class Astar {
                 // Top Right
                 if (current.getJ() + 1 < size) {
                     temp = nodeGrid[current.getI() - 1][current.getJ() + 1];
-                    if (!temp.visited && !temp.blocked && temp.fValue > current.getfValue() + diagonalDistance) {
+                    if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + diagonalDistance) {
 
                         double tempg = current.getgValue() + diagonalDistance;
 
                         temp.setgValue(tempg);
 
-                        int di = temp.getI() - end.getI();
-                        int dj = temp.getJ() - end.getJ();
+                        int di =  Math.abs(temp.getI() - end.getI());
+                        int dj =  Math.abs(temp.getJ() - end.getJ());
 
                         double temph = 1 * (di+dj);
 
@@ -165,14 +178,14 @@ public class Astar {
             // Left
             if (current.getJ() - 1 > 0) {
                 temp = nodeGrid[current.getI()][current.getJ() - 1];
-                if (!temp.visited && !temp.blocked && temp.fValue > current.getfValue() + normalDistance) {
+                if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + normalDistance) {
 
-                    double tempg = current.getgValue() + diagonalDistance;
+                    double tempg = current.getgValue() + normalDistance;
 
                     temp.setgValue(tempg);
 
-                    int di = temp.getI() - end.getI();
-                    int dj = temp.getJ() - end.getJ();
+                    int di =  Math.abs(temp.getI() - end.getI());
+                    int dj =  Math.abs(temp.getJ() - end.getJ());
 
                     double temph = 1 * (di+dj);
 
@@ -187,14 +200,14 @@ public class Astar {
             // Right
             if (current.getJ() + 1 < size) {
                 temp = nodeGrid[current.getI()][current.getJ() + 1];
-                if (!temp.visited && !temp.blocked && temp.fValue > current.getfValue() + normalDistance) {
+                if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + normalDistance) {
 
-                    double tempg = current.getgValue() + diagonalDistance;
+                    double tempg = current.getgValue() + normalDistance;
 
                     temp.setgValue(tempg);
 
-                    int di = temp.getI() - end.getI();
-                    int dj = temp.getJ() - end.getJ();
+                    int di =  Math.abs(temp.getI() - end.getI());
+                    int dj =  Math.abs(temp.getJ() - end.getJ());
 
                     double temph = 1 * (di+dj);
 
@@ -210,14 +223,14 @@ public class Astar {
 
                 // Down Down
                 temp = nodeGrid[current.getI() + 1][current.getJ()];
-                if (!temp.visited && !temp.blocked && temp.fValue > current.getfValue() + normalDistance) {
+                if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + normalDistance) {
 
-                    double tempg = current.getgValue() + diagonalDistance;
+                    double tempg = current.getgValue() + normalDistance;
 
                     temp.setgValue(tempg);
 
-                    int di = temp.getI() - end.getI();
-                    int dj = temp.getJ() - end.getJ();
+                    int di =  Math.abs(temp.getI() - end.getI());
+                    int dj =  Math.abs(temp.getJ() - end.getJ());
 
                     double temph = 1 * (di+dj);
 
@@ -231,14 +244,14 @@ public class Astar {
                 // Down Left
                 if (current.getJ() - 1 >= 0) {
                     temp = nodeGrid[current.getI() + 1][current.getJ() - 1];
-                    if (!temp.visited && !temp.blocked && temp.fValue > current.getfValue() + diagonalDistance) {
+                    if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + diagonalDistance) {
 
                         double tempg = current.getgValue() + diagonalDistance;
 
                         temp.setgValue(tempg);
 
-                        int di = temp.getI() - end.getI();
-                        int dj = temp.getJ() - end.getJ();
+                        int di =  Math.abs(temp.getI() - end.getI());
+                        int dj =  Math.abs(temp.getJ() - end.getJ());
 
                         double temph = 1 * (di+dj);
 
@@ -253,14 +266,14 @@ public class Astar {
                 // Down Right
                 if (current.getJ() + 1 < size) {
                     temp = nodeGrid[current.getI() + 1][current.getJ()+ 1];
-                    if (!temp.visited && !temp.blocked && temp.fValue > current.getfValue() + diagonalDistance) {
+                    if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + diagonalDistance) {
 
                         double tempg = current.getgValue() + diagonalDistance;
 
                         temp.setgValue(tempg);
 
-                        int di = temp.getI() - end.getI();
-                        int dj = temp.getJ() - end.getJ();
+                        int di =  Math.abs(temp.getI() - end.getI());
+                        int dj =  Math.abs(temp.getJ() - end.getJ());
 
                         double temph = 1 * (di+dj);
 
@@ -272,11 +285,12 @@ public class Astar {
                     }
                 }
             }
-
+            System.out.println(z);
+            z++;
 
             current.visited = true;
             closedList.add(current);
-            if(current.gethValue()==0){
+            if(current.getI()==end.getI() && current.getJ()==end.getJ()){
                 isfound=true;
                 break;
             }
@@ -287,10 +301,38 @@ public class Astar {
             System.out.println("No possible path");
 //            closedList.clear();
         }
-        return closedList;
+
+        ArrayList<Node> path = new ArrayList<>();
+
+        // Checking if a path exists
+        if (!(nodeGrid[end.getI()][end.getJ()].getfValue() == Integer.MAX_VALUE)) {
+            //Trace back the path
+            Node current = nodeGrid[end.getI()][end.getJ()];
+            path.add(current);
+//            fcost= fcost+current.distance;
+
+            while (current.parent != null) {
+                path.add(current.parent);
+                current = current.parent;
+
+
+            }
+
+        } else System.out.println("No possible path");
+        System.out.println("******************************************************************************************************************");
+//        System.out.println("\n\t\t\tT O T A L _ C O S T : " + fcost);
+        System.out.println("\n******************************************************************************************************************");
+//        StdDraw.setPenColor(Color.black);
+//        StdDraw.text(end.x, 10-end.y-1, "cost="+(int)fcost);
+        return path;
+
+
+
+
 
     }
 
+//        public void
 
 
 }

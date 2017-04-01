@@ -4,11 +4,11 @@
 public class Node {
 
 
-    int i;
-    int j;
-    double hValue ;
-    double gValue;
-    double fValue= Integer.MAX_VALUE;
+    private int i;
+    private int j;
+    private double hValue ;
+    private double gValue;
+    private double fValue= Integer.MAX_VALUE;
 //    double distance = Integer.MAX_VALUE;
     Node parent = null;
     boolean visited;
