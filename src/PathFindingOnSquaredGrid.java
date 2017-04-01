@@ -96,7 +96,7 @@ public class PathFindingOnSquaredGrid {
         for (int i = 0; i < N; i++)
             for (int j = 0; j < N; j++)
                 if (a[i][j] == which) {
-                    StdDraw.text(j, N-i-1, "("+i+","+j+")");
+//                    StdDraw.text(j, N-i-1, "("+i+","+j+")");
                     StdDraw.square(j, N - i - 1, .5);
 
                 }else StdDraw.filledSquare(j, N-i-1, .5);
@@ -183,10 +183,12 @@ public class PathFindingOnSquaredGrid {
         show(randomlyGenMatrix, true, Ai, Aj, Bi, Bj);
         Stopwatch timerFlow = new Stopwatch();
 
+        Astar testing = new Astar();
 
-        ArrayList<Node> path = new Astar().ShortestPath(randomlyGenMatrix, Ai, Aj, Bi, Bj);
+        ArrayList<Node> path = testing.ShortestPath(randomlyGenMatrix, Ai, Aj, Bi, Bj);
+//        ArrayList<Node> path = new Astar().ShortestPath(randomlyGenMatrix, Ai, Aj, Bi, Bj);
         StdOut.println("time to find the shortest path  = " + timerFlow.elapsedTime());
-
+        ArrayList<Node>    testarray = testing.testing();
         StdDraw.setPenColor(Color.RED);
 
         int i = 0;
@@ -194,6 +196,10 @@ public class PathFindingOnSquaredGrid {
         int prey=0;
 
         Collections.reverse(path);
+
+        for(Node dd : testarray){
+            StdDraw.filledSquare(dd.getJ(), 10 - dd.getI() - 1, .5);
+        }
 
         for (Node node : path) {
 

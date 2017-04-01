@@ -11,6 +11,8 @@ public class Astar {
      ArrayList<Node> openList = new ArrayList<Node>();
      ArrayList<Node> closedList = new ArrayList<Node>();
 
+    ArrayList<Node> test = new ArrayList<Node>();
+
     Node current ;
     Node temp;
     Node start ;
@@ -128,6 +130,7 @@ public class Astar {
                     temp.parent = current;
 
                     openList.add(temp);
+                    test.add(temp);
                 }
 
                 // Top Left
@@ -149,6 +152,7 @@ public class Astar {
 
                         temp.parent = current;
                         openList.add(temp);
+                        test.add(temp);
                     }
                 }
 
@@ -171,6 +175,7 @@ public class Astar {
 
                         temp.parent = current;
                         openList.add(temp);
+                        test.add(temp);
                     }
                 }
             }
@@ -194,6 +199,7 @@ public class Astar {
 
                     temp.parent = current;
                     openList.add(temp);
+                    test.add(temp);
                 }
             }
 
@@ -216,6 +222,7 @@ public class Astar {
 
                     temp.parent = current;
                     openList.add(temp);
+                    test.add(temp);
                 }
             }
             // Down
@@ -239,6 +246,7 @@ public class Astar {
 
                     temp.parent = current;
                     openList.add(temp);
+                    test.add(temp);
                 }
 
                 // Down Left
@@ -260,6 +268,7 @@ public class Astar {
 
                         temp.parent = current;
                         openList.add(temp);
+                        test.add(temp);
                     }
                 }
 
@@ -282,6 +291,7 @@ public class Astar {
 
                         temp.parent = current;
                         openList.add(temp);
+                        test.add(temp);
                     }
                 }
             }
@@ -332,7 +342,10 @@ public class Astar {
 
     }
 
-//        public void
+        public ArrayList<Node> testing(){
+            return test;
+
+        }
 
 
 }
