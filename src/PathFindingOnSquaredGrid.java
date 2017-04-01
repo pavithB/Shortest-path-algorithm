@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 
 public class PathFindingOnSquaredGrid {
 
-    static final int nValue = 100;
+    static final int nValue = 10;
     static final double ratio = 0.8;
 
     // given an N-by-N matrix of open cells, return an N-by-N matrix
@@ -96,7 +96,7 @@ public class PathFindingOnSquaredGrid {
         for (int i = 0; i < N; i++)
             for (int j = 0; j < N; j++)
                 if (a[i][j] == which) {
-//                    StdDraw.text(j, N-i-1, "("+i+","+j+")");
+                    StdDraw.text(j, N-i-1, "("+i+","+j+")");
                     StdDraw.square(j, N - i - 1, .5);
 
                 }else StdDraw.filledSquare(j, N-i-1, .5);
@@ -206,21 +206,21 @@ public class PathFindingOnSquaredGrid {
 
             Collections.reverse(path);
 
-//            for (Node dd : testarray) {
-//
-//                try {
-//                    TimeUnit.MILLISECONDS.sleep(10);
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//
-//                StdDraw.filledSquare(dd.getJ(), nValue - dd.getI() - 1, .5);
-//            }
+            for (Node dd : testarray) {
+
+                try {
+                    TimeUnit.MILLISECONDS.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+                StdDraw.filledSquare(dd.getJ(), nValue - dd.getI() - 1, .5);
+            }
             StdDraw.setPenColor(Color.RED);
             for (Node node : path) {
 
                 try {
-                    TimeUnit.MILLISECONDS.sleep(100);
+                    TimeUnit.MILLISECONDS.sleep(500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
