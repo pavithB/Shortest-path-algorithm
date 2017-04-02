@@ -28,6 +28,7 @@ public class Astar {
 
     boolean isfound =false;
     boolean isManhattan = true;
+    static String choice;
 
 
 
@@ -38,7 +39,7 @@ public class Astar {
         System.out.println("******************************************************************************************************************");
         System.out.println("\n\nChose a metrics for calculating the distance \n\n\t\t1)Euclidean distance \n\t\t2)Manhattan distance\n\t\t3)Chebyshev distance\n");
         Scanner sc = new Scanner(System.in);
-        String choice = sc.next();
+         choice = sc.next();
 
         switch (choice){
             case "1":
@@ -320,19 +321,41 @@ public class Astar {
 
             temp.setgValue(tempg);
 
-            int di =  Math.abs(temp.getI() - end.getI());
-            int dj =  Math.abs(temp.getJ() - end.getJ());
+            double di,dj,temph=0 ;
 
-            double temph = 1 * (di+dj);
+            if(choice.equals("1")) {
+
+                temph =  (Math.sqrt( Math.pow((temp.getI() - end.getI()) , 2) + Math.pow((temp.getJ() - end.getJ()) , 2)) );
+
+                System.out.println(temp.getI()+" "+temp.getJ()+"  "+temph);
+
+
+            }else if(choice.equals("2")){
+
+
+                di = Math.abs(temp.getI() - end.getI());
+                dj = Math.abs(temp.getJ() - end.getJ());
+                temph = 1 * (di+dj);
+
+                System.out.println("normal man "+temph);
+
+            }else if(choice.equals("3")){
+
+                temph = Math.max ( Math.abs(temp.getI() - end.getI()) , Math.abs(temp.getJ() - end.getJ()));
+                System.out.println("nrmal cheb "+temph);
+
+            }
+
 
             temp.sethValue(temph);
             temp.setfValue(tempg+temph);
 
 
-
-
-
         }
+
+
+
+
 
         public void Diagonalneighbor(Node temp , Node current){
 
@@ -340,10 +363,30 @@ public class Astar {
 
             temp.setgValue(tempg);
 
-            int di = Math.abs(temp.getI() - end.getI());
-            int dj = Math.abs(temp.getJ() - end.getJ());
+            double di,dj,temph=0 ;
 
-            double temph = 1 * (di + dj);
+            if(choice.equals("1")) {
+
+
+                temph =  (Math.sqrt( Math.pow((temp.getI() - end.getI()) , 2) + Math.pow((temp.getJ() - end.getJ()) , 2)) );
+                System.out.println(temp.getI()+" "+temp.getJ()+"  "+temph);
+
+
+
+            }else if(choice.equals("2")){
+
+
+                di = Math.abs(temp.getI() - end.getI());
+                dj = Math.abs(temp.getJ() - end.getJ());
+                temph = 1 * (di+dj);
+                System.out.println("diag man "+temph);
+
+            }else if(choice.equals("3")){
+
+                temph = Math.max ( Math.abs(temp.getI() - end.getI()) , Math.abs(temp.getJ() - end.getJ()));
+
+                System.out.println("diag cheb "+temph);
+            }
 
             temp.sethValue(temph);
             temp.setfValue(tempg + temph);
