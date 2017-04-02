@@ -9,6 +9,8 @@ import java.util.concurrent.TimeUnit;
  *  Last update: 22-02-2017
  *
  *  Editor: S.G.V.P.B.Gunasekara
+ *  UOW no - w1608462
+ *  IIT no -2015238
  *
  *************************************************************************/
 
@@ -16,7 +18,8 @@ import java.util.concurrent.TimeUnit;
 public class PathFindingOnSquaredGrid {
 
     static final int nValue = 10;
-    static final double ratio = 0.5;
+    static final double ratio = 0.8;
+    static final boolean textCordinates = true;
 
     // given an N-by-N matrix of open cells, return an N-by-N matrix
     // of cells reachable from the top
@@ -96,7 +99,9 @@ public class PathFindingOnSquaredGrid {
         for (int i = 0; i < N; i++)
             for (int j = 0; j < N; j++)
                 if (a[i][j] == which) {
-                    StdDraw.text(j, N-i-1, "("+i+","+j+")");
+                    if(textCordinates) {
+                        StdDraw.text(j, N - i - 1, "(" + i + "," + j + ")");
+                    }
                     StdDraw.square(j, N - i - 1, .5);
 
                 }else StdDraw.filledSquare(j, N-i-1, .5);
@@ -165,21 +170,41 @@ public class PathFindingOnSquaredGrid {
 
 
 
-
-
-
+            boolean validCordinates=false;
+            int Ai=0,Aj=0,Bi=0,Bj=0;
             Scanner in = new Scanner(System.in);
-            System.out.println("Enter i for A > ");
-            int Ai = in.nextInt();
 
-            System.out.println("Enter j for A > ");
-            int Aj = in.nextInt();
+            do{
 
-            System.out.println("Enter i for B > ");
-            int Bi = in.nextInt();
 
-            System.out.println("Enter j for B > ");
-            int Bj = in.nextInt();
+
+                System.out.println("Enter i for A > ");
+                 Ai = in.nextInt();
+                if(Ai>=nValue){
+                    continue;
+                }
+
+                System.out.println("Enter j for A > ");
+                 Aj = in.nextInt();
+                if(Aj>=nValue){
+                    continue;
+                }
+
+                System.out.println("Enter i for B > ");
+                 Bi = in.nextInt();
+                if(Bi>=nValue){
+                    continue;
+                }
+
+                System.out.println("Enter j for B > ");
+                 Bj = in.nextInt();
+                if(Bj>=nValue){
+                    continue;
+                }else{
+                    validCordinates=true;
+                }
+
+            }while(validCordinates==false);
 
             // THIS IS AN EXAMPLE ONLY ON HOW TO USE THE JAVA INTERNAL WATCH
             // Stop the clock ticking in order to capture the time being spent on inputting the coordinates
@@ -190,13 +215,13 @@ public class PathFindingOnSquaredGrid {
             // System.out.println("Coordinates for B: [" + Bi + "," + Bj + "]");
 
             show(randomlyGenMatrix, true, Ai, Aj, Bi, Bj);
-            Stopwatch timerFlow = new Stopwatch();
+
 
             Astar testing = new Astar();
 
             ArrayList<Node> path = testing.ShortestPath(randomlyGenMatrix, Ai, Aj, Bi, Bj);
 //        ArrayList<Node> path = new Astar().ShortestPath(randomlyGenMatrix, Ai, Aj, Bi, Bj);
-            StdOut.println("time to find the shortest path  = " + timerFlow.elapsedTime());
+
             ArrayList<Node> testarray = testing.testing();
             StdDraw.setPenColor(Color.BLUE);
 

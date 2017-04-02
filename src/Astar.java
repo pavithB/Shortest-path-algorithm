@@ -2,6 +2,9 @@ import java.util.*;
 
 /**
  * Created by Pavith Buddhima on 3/31/2017.
+ *  UOW no - w1608462
+ *  IIT no -2015238
+ *
  */
 public class Astar {
 
@@ -56,7 +59,7 @@ public class Astar {
                 break;
         }
 
-
+        Stopwatch timerFlow = new Stopwatch();
         int size = matrix.length;
 
 
@@ -366,6 +369,7 @@ public class Astar {
         System.out.println("\n******************************************************************************************************************");
 //        StdDraw.setPenColor(Color.black);
 //        StdDraw.text(end.x, 10-end.y-1, "cost="+(int)fcost);
+        StdOut.println("time to find the shortest path  = " + timerFlow.elapsedTime());
         return path;
 
 
