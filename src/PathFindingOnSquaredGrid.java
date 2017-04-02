@@ -17,9 +17,9 @@ import java.util.concurrent.TimeUnit;
 
 public class PathFindingOnSquaredGrid {
 
-    static final int nValue = 10;
-    static final double ratio = 1;
-    static final boolean textCordinates = true;
+    static final int nValue = 100;
+    static final double ratio = 0.8;
+    static final boolean textCordinates = false;
 
     // given an N-by-N matrix of open cells, return an N-by-N matrix
     // of cells reachable from the top

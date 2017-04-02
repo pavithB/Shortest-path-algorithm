@@ -149,7 +149,7 @@ public class Astar {
                 if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + normalDistance) {
 
 
-                    HVneighbor(temp,current);
+                    HVneighbor(temp,current,normalDistance);
                     temp.parent = current;
                     openList.add(temp);
                     test.add(temp);
@@ -164,7 +164,7 @@ public class Astar {
                         if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + diagonalDistance) {
 
 
-                            Diagonalneighbor(temp,current);
+                            HVneighbor(temp,current,diagonalDistance);
                             temp.parent = current;
                             openList.add(temp);
                             test.add(temp);
@@ -178,7 +178,7 @@ public class Astar {
                         if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + diagonalDistance) {
 
 
-                            Diagonalneighbor(temp,current);
+                            HVneighbor(temp,current,diagonalDistance);
                             temp.parent = current;
                             openList.add(temp);
                             test.add(temp);
@@ -194,7 +194,7 @@ public class Astar {
                 if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + normalDistance) {
 
 
-                    HVneighbor(temp,current);
+                    HVneighbor(temp,current,normalDistance);
                     temp.parent = current;
                     openList.add(temp);
                     test.add(temp);
@@ -208,7 +208,7 @@ public class Astar {
                 if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + normalDistance) {
 
 
-                    HVneighbor(temp,current);
+                    HVneighbor(temp,current,normalDistance);
                     temp.parent = current;
                     openList.add(temp);
                     test.add(temp);
@@ -223,7 +223,7 @@ public class Astar {
                 if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + normalDistance) {
 
 
-                    HVneighbor(temp,current);
+                    HVneighbor(temp,current,normalDistance);
                     temp.parent = current;
                     openList.add(temp);
                     test.add(temp);
@@ -238,7 +238,7 @@ public class Astar {
                         if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + diagonalDistance) {
 
 
-                            Diagonalneighbor(temp,current);
+                            HVneighbor(temp,current,diagonalDistance);
                             temp.parent = current;
                             openList.add(temp);
                             test.add(temp);
@@ -252,7 +252,7 @@ public class Astar {
                         if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + diagonalDistance) {
 
 
-                            Diagonalneighbor(temp,current);
+                            HVneighbor(temp,current,diagonalDistance);
                             temp.parent = current;
                             openList.add(temp);
                             test.add(temp);
@@ -314,10 +314,10 @@ public class Astar {
 
 
 
-        public void HVneighbor(Node temp ,Node current){
+        public void HVneighbor(Node temp ,Node current ,double distance){
 
 
-            double tempg = current.getgValue() + normalDistance;
+            double tempg = current.getgValue() + distance;
 
             temp.setgValue(tempg);
 
@@ -327,7 +327,7 @@ public class Astar {
 
                 temph =  (Math.sqrt( Math.pow((temp.getI() - end.getI()) , 2) + Math.pow((temp.getJ() - end.getJ()) , 2)) );
 
-                System.out.println(temp.getI()+" "+temp.getJ()+"  "+temph);
+
 
 
             }else if(choice.equals("2")){
@@ -337,12 +337,12 @@ public class Astar {
                 dj = Math.abs(temp.getJ() - end.getJ());
                 temph = 1 * (di+dj);
 
-                System.out.println("normal man "+temph);
+
 
             }else if(choice.equals("3")){
 
                 temph = Math.max ( Math.abs(temp.getI() - end.getI()) , Math.abs(temp.getJ() - end.getJ()));
-                System.out.println("nrmal cheb "+temph);
+
 
             }
 
@@ -357,43 +357,43 @@ public class Astar {
 
 
 
-        public void Diagonalneighbor(Node temp , Node current){
-
-            double tempg = current.getgValue() + diagonalDistance;
-
-            temp.setgValue(tempg);
-
-            double di,dj,temph=0 ;
-
-            if(choice.equals("1")) {
-
-
-                temph =  (Math.sqrt( Math.pow((temp.getI() - end.getI()) , 2) + Math.pow((temp.getJ() - end.getJ()) , 2)) );
-                System.out.println(temp.getI()+" "+temp.getJ()+"  "+temph);
-
-
-
-            }else if(choice.equals("2")){
-
-
-                di = Math.abs(temp.getI() - end.getI());
-                dj = Math.abs(temp.getJ() - end.getJ());
-                temph = 1 * (di+dj);
-                System.out.println("diag man "+temph);
-
-            }else if(choice.equals("3")){
-
-                temph = Math.max ( Math.abs(temp.getI() - end.getI()) , Math.abs(temp.getJ() - end.getJ()));
-
-                System.out.println("diag cheb "+temph);
-            }
-
-            temp.sethValue(temph);
-            temp.setfValue(tempg + temph);
-
-
-
-        }
+//        public void Diagonalneighbor(Node temp , Node current){
+//
+//            double tempg = current.getgValue() + diagonalDistance;
+//
+//            temp.setgValue(tempg);
+//
+//            double di,dj,temph=0 ;
+//
+//            if(choice.equals("1")) {
+//
+//
+//                temph =  (Math.sqrt( Math.pow((temp.getI() - end.getI()) , 2) + Math.pow((temp.getJ() - end.getJ()) , 2)) );
+//
+//
+//
+//
+//            }else if(choice.equals("2")){
+//
+//
+//                di = Math.abs(temp.getI() - end.getI());
+//                dj = Math.abs(temp.getJ() - end.getJ());
+//                temph = 1 * (di+dj);
+//
+//
+//            }else if(choice.equals("3")){
+//
+//                temph = Math.max ( Math.abs(temp.getI() - end.getI()) , Math.abs(temp.getJ() - end.getJ()));
+//
+//
+//            }
+//
+//            temp.sethValue(temph);
+//            temp.setfValue(tempg + temph);
+//
+//
+//
+//        }
 
 
 }
