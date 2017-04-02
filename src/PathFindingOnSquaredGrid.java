@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 public class PathFindingOnSquaredGrid {
 
     static final int nValue = 10;
-    static final double ratio = 1;
+    static final double ratio = 0.8;
     static final boolean textCordinates = true;
 
     // given an N-by-N matrix of open cells, return an N-by-N matrix
@@ -249,7 +249,7 @@ public class PathFindingOnSquaredGrid {
             for (Node node : path) {
 
                 try {
-                    TimeUnit.MILLISECONDS.sleep(500);
+                    TimeUnit.MILLISECONDS.sleep(100);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

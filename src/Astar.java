@@ -147,21 +147,12 @@ public class Astar {
                 temp = nodeGrid[current.getI() - 1][current.getJ()];
                 if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + normalDistance) {
 
-                    double tempg = current.getgValue() + normalDistance;
 
-                    temp.setgValue(tempg);
-
-                    int di =  Math.abs(temp.getI() - end.getI());
-                    int dj =  Math.abs(temp.getJ() - end.getJ());
-
-                    double temph = 1 * (di+dj);
-
-                    temp.sethValue(temph);
-                    temp.setfValue(tempg+temph);
+                    HVneighbor(temp,current);
                     temp.parent = current;
-
                     openList.add(temp);
                     test.add(temp);
+
                 }
 
                 if(isManhattan) {
@@ -171,21 +162,12 @@ public class Astar {
                         temp = nodeGrid[current.getI() - 1][current.getJ() - 1];
                         if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + diagonalDistance) {
 
-                            double tempg = current.getgValue() + diagonalDistance;
 
-                            temp.setgValue(tempg);
-
-                            int di = Math.abs(temp.getI() - end.getI());
-                            int dj = Math.abs(temp.getJ() - end.getJ());
-
-                            double temph = 1 * (di + dj);
-
-                            temp.sethValue(temph);
-                            temp.setfValue(tempg + temph);
-
+                            Diagonalneighbor(temp,current);
                             temp.parent = current;
                             openList.add(temp);
                             test.add(temp);
+
                         }
                     }
 
@@ -194,21 +176,12 @@ public class Astar {
                         temp = nodeGrid[current.getI() - 1][current.getJ() + 1];
                         if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + diagonalDistance) {
 
-                            double tempg = current.getgValue() + diagonalDistance;
 
-                            temp.setgValue(tempg);
-
-                            int di = Math.abs(temp.getI() - end.getI());
-                            int dj = Math.abs(temp.getJ() - end.getJ());
-
-                            double temph = 1 * (di + dj);
-
-                            temp.sethValue(temph);
-                            temp.setfValue(tempg + temph);
-
+                            Diagonalneighbor(temp,current);
                             temp.parent = current;
                             openList.add(temp);
                             test.add(temp);
+
                         }
                     }
                 }
@@ -219,21 +192,12 @@ public class Astar {
                 temp = nodeGrid[current.getI()][current.getJ() - 1];
                 if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + normalDistance) {
 
-                    double tempg = current.getgValue() + normalDistance;
 
-                    temp.setgValue(tempg);
-
-                    int di =  Math.abs(temp.getI() - end.getI());
-                    int dj =  Math.abs(temp.getJ() - end.getJ());
-
-                    double temph = 1 * (di+dj);
-
-                    temp.sethValue(temph);
-                    temp.setfValue(tempg+temph);
-
+                    HVneighbor(temp,current);
                     temp.parent = current;
                     openList.add(temp);
                     test.add(temp);
+
                 }
             }
 
@@ -242,21 +206,12 @@ public class Astar {
                 temp = nodeGrid[current.getI()][current.getJ() + 1];
                 if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + normalDistance) {
 
-                    double tempg = current.getgValue() + normalDistance;
 
-                    temp.setgValue(tempg);
-
-                    int di =  Math.abs(temp.getI() - end.getI());
-                    int dj =  Math.abs(temp.getJ() - end.getJ());
-
-                    double temph = 1 * (di+dj);
-
-                    temp.sethValue(temph);
-                    temp.setfValue(tempg+temph);
-
+                    HVneighbor(temp,current);
                     temp.parent = current;
                     openList.add(temp);
                     test.add(temp);
+
                 }
             }
             // Down
@@ -266,21 +221,12 @@ public class Astar {
                 temp = nodeGrid[current.getI() + 1][current.getJ()];
                 if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + normalDistance) {
 
-                    double tempg = current.getgValue() + normalDistance;
 
-                    temp.setgValue(tempg);
-
-                    int di =  Math.abs(temp.getI() - end.getI());
-                    int dj =  Math.abs(temp.getJ() - end.getJ());
-
-                    double temph = 1 * (di+dj);
-
-                    temp.sethValue(temph);
-                    temp.setfValue(tempg+temph);
-
+                    HVneighbor(temp,current);
                     temp.parent = current;
                     openList.add(temp);
                     test.add(temp);
+
                 }
 
 
@@ -290,21 +236,12 @@ public class Astar {
                         temp = nodeGrid[current.getI() + 1][current.getJ() - 1];
                         if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + diagonalDistance) {
 
-                            double tempg = current.getgValue() + diagonalDistance;
 
-                            temp.setgValue(tempg);
-
-                            int di = Math.abs(temp.getI() - end.getI());
-                            int dj = Math.abs(temp.getJ() - end.getJ());
-
-                            double temph = 1 * (di + dj);
-
-                            temp.sethValue(temph);
-                            temp.setfValue(tempg + temph);
-
+                            Diagonalneighbor(temp,current);
                             temp.parent = current;
                             openList.add(temp);
                             test.add(temp);
+
                         }
                     }
 
@@ -313,21 +250,12 @@ public class Astar {
                         temp = nodeGrid[current.getI() + 1][current.getJ() + 1];
                         if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + diagonalDistance) {
 
-                            double tempg = current.getgValue() + diagonalDistance;
 
-                            temp.setgValue(tempg);
-
-                            int di = Math.abs(temp.getI() - end.getI());
-                            int dj = Math.abs(temp.getJ() - end.getJ());
-
-                            double temph = 1 * (di + dj);
-
-                            temp.sethValue(temph);
-                            temp.setfValue(tempg + temph);
-
+                            Diagonalneighbor(temp,current);
                             temp.parent = current;
                             openList.add(temp);
                             test.add(temp);
+
                         }
                     }
                 }
@@ -385,6 +313,44 @@ public class Astar {
 
 
 
+        public void HVneighbor(Node temp ,Node current){
+
+
+            double tempg = current.getgValue() + normalDistance;
+
+            temp.setgValue(tempg);
+
+            int di =  Math.abs(temp.getI() - end.getI());
+            int dj =  Math.abs(temp.getJ() - end.getJ());
+
+            double temph = 1 * (di+dj);
+
+            temp.sethValue(temph);
+            temp.setfValue(tempg+temph);
+
+
+
+
+
+        }
+
+        public void Diagonalneighbor(Node temp , Node current){
+
+            double tempg = current.getgValue() + diagonalDistance;
+
+            temp.setgValue(tempg);
+
+            int di = Math.abs(temp.getI() - end.getI());
+            int dj = Math.abs(temp.getJ() - end.getJ());
+
+            double temph = 1 * (di + dj);
+
+            temp.sethValue(temph);
+            temp.setfValue(tempg + temph);
+
+
+
+        }
 
 
 }
