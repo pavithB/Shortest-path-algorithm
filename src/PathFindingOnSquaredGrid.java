@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 public class PathFindingOnSquaredGrid {
 
     static final int nValue = 10;
-    static final double ratio = 0.8;
+    static final double ratio = 1;
     static final boolean textCordinates = true;
 
     // given an N-by-N matrix of open cells, return an N-by-N matrix
@@ -178,27 +178,31 @@ public class PathFindingOnSquaredGrid {
 
 
 
-                System.out.println("Enter i for A > ");
+                System.out.println("\nEnter i for A > ");
                  Ai = in.nextInt();
                 if(Ai>=nValue){
+                    System.out.println("\n\tplease re-enter coordinates below "+nValue);
                     continue;
                 }
 
                 System.out.println("Enter j for A > ");
                  Aj = in.nextInt();
                 if(Aj>=nValue){
+                    System.out.println("\n\tplease re-enter coordinates below "+nValue);
                     continue;
                 }
 
                 System.out.println("Enter i for B > ");
                  Bi = in.nextInt();
                 if(Bi>=nValue){
+                    System.out.println("\n\tplease re-enter coordinates below "+nValue);
                     continue;
                 }
 
                 System.out.println("Enter j for B > ");
                  Bj = in.nextInt();
                 if(Bj>=nValue){
+                    System.out.println("\n\tplease re-enter coordinates below "+nValue);
                     continue;
                 }else{
                     validCordinates=true;
