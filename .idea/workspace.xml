@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11b43a4e-f3e3-4e09-b47d-c87ced1d25ab" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/algo cw/PathFindingOnSquaredGrid.class" afterPath="$PROJECT_DIR$/out/production/algo cw/PathFindingOnSquaredGrid.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Astar.java" afterPath="$PROJECT_DIR$/src/Astar.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PathFindingOnSquaredGrid.java" afterPath="$PROJECT_DIR$/src/PathFindingOnSquaredGrid.java" />
     </list>
     <ignored path="AlgoCW.iws" />
@@ -26,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PathFindingOnSquaredGrid.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PathFindingOnSquaredGrid.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PathFindingOnSquaredGrid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+            <state relative-caret-position="2734">
+              <caret line="284" column="17" selection-start-line="284" selection-start-column="17" selection-end-line="284" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -38,10 +38,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Astar.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Astar.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Astar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
+            <state relative-caret-position="-378">
               <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="43" />
               <folding />
             </state>
@@ -728,7 +728,7 @@
       <workItem from="1490896604506" duration="1830000" />
       <workItem from="1490931065099" duration="973000" />
       <workItem from="1490966031734" duration="46188000" />
-      <workItem from="1491121373449" duration="24893000" />
+      <workItem from="1491121373449" duration="26454000" />
     </task>
     <task id="LOCAL-00001" summary="change colors&#10;">
       <created>1490818993439</created>
@@ -954,11 +954,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491179394368</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="finalize the code with only astar">
+      <created>1491179714920</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1491179714920</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118466000" />
+    <option name="totallyTimeSpent" value="120027000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -972,7 +979,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33694476" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33694476" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1352,21 +1359,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PathFindingOnSquaredGrid.java">
+    <entry file="file://$PROJECT_DIR$/src/Astar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-378">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Astar.java">
+    <entry file="file://$PROJECT_DIR$/src/PathFindingOnSquaredGrid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="43" />
-          <folding />
+        <state relative-caret-position="2734">
+          <caret line="284" column="17" selection-start-line="284" selection-start-column="17" selection-end-line="284" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -19,9 +19,9 @@ import java.util.concurrent.TimeUnit;
 public class PathFindingOnSquaredGrid {
 
 
-    static final int nValue = 10;
+    static  int nValue = 10;
     static final double ratio = 0.8;
-    static final boolean textCordinates = true;
+//    static final boolean textCordinates = true;
 
     // given an N-by-N matrix of open cells, return an N-by-N matrix
     // of cells reachable from the top
@@ -105,7 +105,7 @@ public class PathFindingOnSquaredGrid {
         for (int i = 0; i < N; i++)
             for (int j = 0; j < N; j++)
                 if (a[i][j] == which) {
-                    if (textCordinates) {
+                    if (nValue<13) {
                         StdDraw.text(j, N - i - 1, "(" + i + "," + j + ")");
                     }
                     StdDraw.square(j, N - i - 1, .5);
@@ -133,6 +133,28 @@ public class PathFindingOnSquaredGrid {
                 else StdDraw.filledSquare(j, N - i - 1, .5);
     }
 
+
+    // draw the N-by-N boolean matrix to standard draw, including the points A (x1, y1) and B (x2,y2) to be marked by a circle
+    public static void showfinal(boolean[][] a, boolean which, int x1, int y1, int x2, int y2) {
+        int N = a.length;
+        StdDraw.setXscale(-1, N);
+        StdDraw.setYscale(-1, N);
+        StdDraw.setPenColor(StdDraw.BLACK);
+
+//        StdDraw.line(10-x2-1,y2,10-x1-1,y1);
+
+        for (int i = 0; i < N; i++)
+            for (int j = 0; j < N; j++)
+                if (a[i][j] == which)
+                    if ((i == x1 && j == y1) || (i == x2 && j == y2)) {
+                        StdDraw.setPenColor(StdDraw.RED);
+                        StdDraw.filledCircle(j, N - i - 1, .5);
+                        StdDraw.setPenColor(StdDraw.BLACK);
+                    }
+
+    }
+
+
     // return a random N-by-N boolean matrix, where each entry is
     // true with probability p
     public static boolean[][] random(int N, double p) {
@@ -149,6 +171,14 @@ public class PathFindingOnSquaredGrid {
 
 
         while (true) {
+            System.out.println("******************************************************************************************************************");
+            System.out.println("\n\n\t\t\t\t\t\t\t\t T H E _S H O R T E S T _ P A T H \n\n");
+            System.out.println("******************************************************************************************************************");
+
+
+            Scanner in = new Scanner(System.in);
+            System.out.println("\nE N T E R _ T H E _ S I Z E _ O F _ T H E _ G R I D :");
+            nValue = in.nextInt();
 
             // boolean[][] open = StdArrayIO.readBoolean2D();
 
@@ -172,12 +202,10 @@ public class PathFindingOnSquaredGrid {
             // Start the clock ticking in order to capture the time being spent on inputting the coordinates
             // You should position this command accordingly in order to perform the algorithmic analysis
 
-            System.out.println("******************************************************************************************************************");
-            System.out.println("\n\n\t\t\t\t\t\t\t\t T H E _S H O R T E S T _ P A T H \n\n");
-            System.out.println("******************************************************************************************************************");
+
             boolean validCordinates = false;
             int Ai = 0, Aj = 0, Bi = 0, Bj = 0;
-            Scanner in = new Scanner(System.in);
+
             int inputCount = 0;
 
             do {
@@ -240,7 +268,7 @@ public class PathFindingOnSquaredGrid {
 //        ArrayList<Node> path = new Astar().ShortestPath(randomlyGenMatrix, Ai, Aj, Bi, Bj);
 
             ArrayList<Node> testarray = testing.testing();
-            StdDraw.setPenColor(Color.BLUE);
+            StdDraw.setPenColor(Color.green);
 
             int i = 0;
             int prex = 0;
@@ -283,6 +311,7 @@ public class PathFindingOnSquaredGrid {
 
                 }
             }
+            showfinal(randomlyGenMatrix, true, Ai, Aj, Bi, Bj);
 
             System.out.println("\n\n\t\tP R E S S _ 0 _ T O _ E X I T");
 
