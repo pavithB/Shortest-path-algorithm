@@ -25,7 +25,9 @@ public class Node {
     //this store the parent node of the current node (to current node from where the path comes)
     Node parent = null;
 
+    // this variable to check the node is already visited or not
     boolean visited;
+
 
     boolean blocked;
 
