@@ -8,7 +8,8 @@ import java.util.concurrent.TimeUnit;
  *  Original Author: Dr E Kapetanios
  *  Last update: 22-02-2017
  *
- *  Editor: S.G.V.P.B.Gunasekara
+ *  Edited by: Pavith Buddhima on 3/31/2017.
+ *  S.G.V.P.B.Gunasekara
  *  UOW no - w1608462
  *  IIT no -2015238
  *
@@ -197,7 +198,7 @@ public class PathFindingOnSquaredGrid {
                 System.out.println("Enter j for    S T A R T I N G _ P O I N T :");
                 Aj = in.nextInt();
                 if (Aj >= nValue) {
-                    System.out.println("\n\tplease R E - E N T E Rcoordinates below " + nValue);
+                    System.out.println("\n\tplease R E - E N T E R coordinates below " + nValue);
                     continue;
                 }
 
