@@ -112,6 +112,7 @@ public class Node {
     }
 
 
+    //this constructor set i coordinate and j coordinate for nodes while node objects are created
     public Node(int i, int j) {
         this.i = i;
         this.j = j;
