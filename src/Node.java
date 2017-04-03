@@ -21,6 +21,8 @@ public class Node {
     private double fValue = Integer.MAX_VALUE;
 
     //    double distance = Integer.MAX_VALUE;
+
+    //this store the parent node of the current node (to current node from where the path comes)
     Node parent = null;
 
     boolean visited;
