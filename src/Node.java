@@ -17,10 +17,10 @@ public class Node {
     private double gValue;
 
     //f value is the sum of h value and g value for that node
+    //initially set f values to MAX VALUE
     private double fValue = Integer.MAX_VALUE;
 
     //    double distance = Integer.MAX_VALUE;
-
     Node parent = null;
 
     boolean visited;
