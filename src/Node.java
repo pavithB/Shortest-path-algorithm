@@ -5,9 +5,9 @@
  */
 public class Node {
 
-
+    //i coordinates for the node
     private int i;
-
+    //j coordinates for the node
     private int j;
 
     private double hValue;
