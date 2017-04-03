@@ -10,10 +10,13 @@ public class Node {
     //j coordinates for the node
     private int j;
 
+    // heuristic value for the node
     private double hValue;
 
+    //this store the g cost for the node
     private double gValue;
 
+    //f value is the sum of h value and g value for that node
     private double fValue = Integer.MAX_VALUE;
 
     //    double distance = Integer.MAX_VALUE;

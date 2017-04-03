@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11b43a4e-f3e3-4e09-b47d-c87ced1d25ab" name="Default" comment="commenting ( date* 2017/ 4/ 23 )">
+    <list default="true" id="11b43a4e-f3e3-4e09-b47d-c87ced1d25ab" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Node.java" afterPath="$PROJECT_DIR$/src/Node.java" />
     </list>
@@ -48,8 +48,8 @@
       <file leaf-file-name="Node.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state relative-caret-position="306">
+              <caret line="18" column="61" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -734,14 +734,7 @@
       <workItem from="1492800659347" duration="7473000" />
       <workItem from="1492842758877" duration="8081000" />
       <workItem from="1492870962840" duration="3505000" />
-      <workItem from="1492887559885" duration="2303000" />
-    </task>
-    <task id="LOCAL-00005" summary="fix error while calculating distnce">
-      <created>1490819165797</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1490819165797</updated>
+      <workItem from="1492887559885" duration="2434000" />
     </task>
     <task id="LOCAL-00006" summary="done with asking what method to calculate the distance">
       <created>1490819204186</created>
@@ -1079,11 +1072,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492897273841</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="commenting ( date* 2017/ 4/ 23 )">
+      <created>1491256146293</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1491256146293</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176451000" />
+    <option name="totallyTimeSpent" value="176582000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1155,7 +1155,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change  the sze of  the matrix" />
     <MESSAGE value="add a switch case to choose the method to calculate the distance" />
     <MESSAGE value="complete the adding swith case to choose distnce method" />
     <MESSAGE value="fix error while calculating distnce" />
@@ -1180,7 +1179,8 @@
     <MESSAGE value="finalize the code with only astar new" />
     <MESSAGE value="commenting" />
     <MESSAGE value="fixed the bug on most left column" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed the bug on most left column" />
+    <MESSAGE value="commenting ( date* 2017/ 4/ 23 )" />
+    <option name="LAST_COMMIT_MESSAGE" value="commenting ( date* 2017/ 4/ 23 )" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1501,8 +1501,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="18" column="61" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
           <folding />
         </state>
       </provider>
