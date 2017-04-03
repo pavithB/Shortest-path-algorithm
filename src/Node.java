@@ -1,18 +1,17 @@
 /**
  * Created bj Pavith Buddhima on 4/1/2017.
- *   UOW no - w1608462
- *   IIT no -2015238
- *
+ * UOW no - w1608462
+ * IIT no -2015238
  */
 public class Node {
 
 
     private int i;
     private int j;
-    private double hValue ;
+    private double hValue;
     private double gValue;
-    private double fValue= Integer.MAX_VALUE;
-//    double distance = Integer.MAX_VALUE;
+    private double fValue = Integer.MAX_VALUE;
+    //    double distance = Integer.MAX_VALUE;
     Node parent = null;
     boolean visited;
     boolean blocked;
@@ -82,10 +81,11 @@ public class Node {
         this.blocked = blocked;
     }
 
+
     public Node(int i, int j) {
-            this.i = i;
-            this.j = j;
-        }
+        this.i = i;
+        this.j = j;
     }
+}
 
 

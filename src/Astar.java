@@ -2,46 +2,43 @@ import java.util.*;
 
 /**
  * Created by Pavith Buddhima on 3/31/2017.
- *  UOW no - w1608462
- *  IIT no -2015238
- *
+ * UOW no - w1608462
+ * IIT no -2015238
  */
 public class Astar {
 
-     ArrayList<Node> openList = new ArrayList<Node>();
-     ArrayList<Node> closedList = new ArrayList<Node>();
+    ArrayList<Node> openList = new ArrayList<Node>();
+    ArrayList<Node> closedList = new ArrayList<Node>();
 
     ArrayList<Node> test = new ArrayList<Node>();
 
-    Node current ;
+    Node current;
     Node temp;
-    Node start ;
+    Node start;
     Node end;
     Node[][] nodeGrid;
 
 
 //    int z;
 
-    double pathCost =0;
+    double pathCost = 0;
     double diagonalDistance;
-    double normalDistance ;
+    double normalDistance;
 
-    boolean isfound =false;
+    boolean isfound = false;
     boolean isManhattan = true;
     static String choice;
 
 
-
-    public ArrayList<Node> ShortestPath(boolean[][] matrix, int si, int sj, int ei, int ej){
-
+    public ArrayList<Node> ShortestPath(boolean[][] matrix, int si, int sj, int ei, int ej) {
 
 
         System.out.println("******************************************************************************************************************");
         System.out.println("\n\nChose a metrics for calculating the distance \n\n\t\t1)Euclidean distance \n\t\t2)Manhattan distance\n\t\t3)Chebyshev distance\n");
         Scanner sc = new Scanner(System.in);
-         choice = sc.next();
+        choice = sc.next();
 
-        switch (choice){
+        switch (choice) {
             case "1":
                 diagonalDistance = 1.4;
                 normalDistance = 1.0;
@@ -49,7 +46,7 @@ public class Astar {
             case "2":
                 diagonalDistance = 2.0;
                 normalDistance = 1.0;
-                isManhattan=false;
+                isManhattan = false;
                 break;
             case "3":
                 diagonalDistance = 1.0;
@@ -64,14 +61,13 @@ public class Astar {
         int size = matrix.length;
 
 
-
         start = new Node(si, sj);
         end = new Node(ei, ej);
+
 
         // The grid that is used to store nodes
 
         nodeGrid = new Node[size][size];
-
 
 
         // Creating nodes and finding blocked cells in matrix and mapping accordingly to our grid
@@ -97,8 +93,6 @@ public class Astar {
         }
 
 
-
-
         // setting start distance to 0.
         // All other nodes will have infinity distance at the beginning
         start.setfValue(0);
@@ -117,9 +111,6 @@ public class Astar {
         Queue<Node> openList = new PriorityQueue<>(size, adjacencyComparator);
 
 
-
-
-
 //        int distart = Math.abs(si - ei);
 //        int djstart = Math.abs(sj - ej);
 //
@@ -132,13 +123,8 @@ public class Astar {
         while (openList.size() > 0) {
 
 
-
-
-
             Node current = openList.remove();
             Node temp;
-
-
 
 
             // Top
@@ -149,14 +135,14 @@ public class Astar {
                 if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + normalDistance) {
 
 
-                    HVneighbor(temp,current,normalDistance);
+                    HVneighbor(temp, current, normalDistance);
                     temp.parent = current;
                     openList.add(temp);
                     test.add(temp);
 
                 }
 
-                if(isManhattan) {
+                if (isManhattan) {
 
                     // Top Left
                     if (current.getJ() - 1 > 0) {
@@ -164,7 +150,7 @@ public class Astar {
                         if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + diagonalDistance) {
 
 
-                            HVneighbor(temp,current,diagonalDistance);
+                            HVneighbor(temp, current, diagonalDistance);
                             temp.parent = current;
                             openList.add(temp);
                             test.add(temp);
@@ -178,7 +164,7 @@ public class Astar {
                         if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + diagonalDistance) {
 
 
-                            HVneighbor(temp,current,diagonalDistance);
+                            HVneighbor(temp, current, diagonalDistance);
                             temp.parent = current;
                             openList.add(temp);
                             test.add(temp);
@@ -194,7 +180,7 @@ public class Astar {
                 if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + normalDistance) {
 
 
-                    HVneighbor(temp,current,normalDistance);
+                    HVneighbor(temp, current, normalDistance);
                     temp.parent = current;
                     openList.add(temp);
                     test.add(temp);
@@ -208,7 +194,7 @@ public class Astar {
                 if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + normalDistance) {
 
 
-                    HVneighbor(temp,current,normalDistance);
+                    HVneighbor(temp, current, normalDistance);
                     temp.parent = current;
                     openList.add(temp);
                     test.add(temp);
@@ -223,7 +209,7 @@ public class Astar {
                 if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + normalDistance) {
 
 
-                    HVneighbor(temp,current,normalDistance);
+                    HVneighbor(temp, current, normalDistance);
                     temp.parent = current;
                     openList.add(temp);
                     test.add(temp);
@@ -231,14 +217,14 @@ public class Astar {
                 }
 
 
-                if(isManhattan) {
+                if (isManhattan) {
                     // Down Left
                     if (current.getJ() - 1 >= 0) {
                         temp = nodeGrid[current.getI() + 1][current.getJ() - 1];
                         if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + diagonalDistance) {
 
 
-                            HVneighbor(temp,current,diagonalDistance);
+                            HVneighbor(temp, current, diagonalDistance);
                             temp.parent = current;
                             openList.add(temp);
                             test.add(temp);
@@ -252,7 +238,7 @@ public class Astar {
                         if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + diagonalDistance) {
 
 
-                            HVneighbor(temp,current,diagonalDistance);
+                            HVneighbor(temp, current, diagonalDistance);
                             temp.parent = current;
                             openList.add(temp);
                             test.add(temp);
@@ -264,17 +250,17 @@ public class Astar {
 
             current.visited = true;
             closedList.add(current);
-            if(current.getI()==end.getI() && current.getJ()==end.getJ()){
-                isfound=true;
+            if (current.getI() == end.getI() && current.getJ() == end.getJ()) {
+                isfound = true;
                 break;
             }
         }
 
 
-        if(!isfound){
-            System.out.println("No possible path");
-//            closedList.clear();
-        }
+//        if(!isfound){
+//            System.out.println("No possible path");
+////            closedList.clear();
+//        }
 
         ArrayList<Node> path = new ArrayList<>();
 
@@ -283,7 +269,7 @@ public class Astar {
             //Trace back the path
             Node current = nodeGrid[end.getI()][end.getJ()];
             path.add(current);
-            pathCost= pathCost+current.getgValue();
+            pathCost = pathCost + current.getgValue();
 
             while (current.parent != null) {
                 path.add(current.parent);
@@ -292,69 +278,68 @@ public class Astar {
 
             }
 
-        } else System.out.println("No possible path");
-        System.out.println("******************************************************************************************************************");
-        System.out.println("\n\t\t\tT O T A L _ C O S T : " + pathCost);
-        System.out.println("\n******************************************************************************************************************");
+            System.out.println("******************************************************************************************************************");
+            System.out.println("\n\t\t\t\tT O T A L _ C O S T : " + pathCost);
+            System.out.println("\n******************************************************************************************************************");
+            StdOut.println("\t\t*time taken to evaluate the shortest path  = " + timerFlow.elapsedTime() + "ms");
+
+        } else {
+            System.out.println("******************************************************************************************************************");
+            System.out.println("\n\n:(\t\t\t\tN O _ P O S S I B L E _ P A T H \n\n");
+            System.out.println("******************************************************************************************************************");
+            StdOut.println("\t\t*time taken to evaluate = " + timerFlow.elapsedTime() + "ms");
+
+        }
+
 //        StdDraw.setPenColor(Color.black);
 //        StdDraw.text(end.x, 10-end.y-1, "cost="+(int)fcost);
-        StdOut.println("time to find the shortest path  = " + timerFlow.elapsedTime());
+
         return path;
-
-
-
 
 
     }
 
-        public ArrayList<Node> testing(){
-            return test;
+    public ArrayList<Node> testing() {
+        return test;
 
-        }
-
-
-
-        public void HVneighbor(Node temp ,Node current ,double distance){
+    }
 
 
-            double tempg = current.getgValue() + distance;
-
-            temp.setgValue(tempg);
-
-            double di,dj,temph=0 ;
-
-            if(choice.equals("1")) {
-
-                temph =  (Math.sqrt( Math.pow((temp.getI() - end.getI()) , 2) + Math.pow((temp.getJ() - end.getJ()) , 2)) );
+    public void HVneighbor(Node temp, Node current, double distance) {
 
 
+        double tempg = current.getgValue() + distance;
+
+        temp.setgValue(tempg);
+
+        double di, dj, temph = 0;
+
+        if (choice.equals("1")) {
+
+            temph = (Math.sqrt(Math.pow((temp.getI() - end.getI()), 2) + Math.pow((temp.getJ() - end.getJ()), 2)));
 
 
-            }else if(choice.equals("2")){
+        } else if (choice.equals("2")) {
 
 
-                di = Math.abs(temp.getI() - end.getI());
-                dj = Math.abs(temp.getJ() - end.getJ());
-                temph = 1 * (di+dj);
+            di = Math.abs(temp.getI() - end.getI());
+            dj = Math.abs(temp.getJ() - end.getJ());
+            temph = 1 * (di + dj);
 
 
+        } else if (choice.equals("3")) {
 
-            }else if(choice.equals("3")){
-
-                temph = Math.max ( Math.abs(temp.getI() - end.getI()) , Math.abs(temp.getJ() - end.getJ()));
-
-
-            }
-
-
-            temp.sethValue(temph);
-            temp.setfValue(tempg+temph);
+            temph = Math.max(Math.abs(temp.getI() - end.getI()), Math.abs(temp.getJ() - end.getJ()));
 
 
         }
 
 
+        temp.sethValue(temph);
+        temp.setfValue(tempg + temph);
 
+
+    }
 
 
 //        public void Diagonalneighbor(Node temp , Node current){

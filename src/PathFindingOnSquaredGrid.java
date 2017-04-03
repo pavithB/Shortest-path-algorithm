@@ -17,12 +17,18 @@ import java.util.concurrent.TimeUnit;
 
 public class PathFindingOnSquaredGrid {
 
-    static final int nValue = 100;
+
+    static final int nValue = 10;
     static final double ratio = 0.8;
-    static final boolean textCordinates = false;
+    static final boolean textCordinates = true;
 
     // given an N-by-N matrix of open cells, return an N-by-N matrix
     // of cells reachable from the top
+
+
+    static boolean[][] randomlyGenMatrix;
+
+
     public static boolean[][] flow(boolean[][] open) {
         int N = open.length;
 
@@ -46,10 +52,10 @@ public class PathFindingOnSquaredGrid {
 
         full[i][j] = true;
 
-        flow(open, full, i+1, j);   // down
-        flow(open, full, i, j+1);   // right
-        flow(open, full, i, j-1);   // left
-        flow(open, full, i-1, j);   // up
+        flow(open, full, i + 1, j);   // down
+        flow(open, full, i, j + 1);   // right
+        flow(open, full, i, j - 1);   // left
+        flow(open, full, i - 1, j);   // up
     }
 
     // does the system percolate?
@@ -58,7 +64,7 @@ public class PathFindingOnSquaredGrid {
 
         boolean[][] full = flow(open);
         for (int j = 0; j < N; j++) {
-            if (full[N-1][j]) return true;
+            if (full[N - 1][j]) return true;
         }
 
         return false;
@@ -71,16 +77,15 @@ public class PathFindingOnSquaredGrid {
         boolean[][] full = flow(open);
         int directPerc = 0;
         for (int j = 0; j < N; j++) {
-            if (full[N-1][j]) {
+            if (full[N - 1][j]) {
                 // StdOut.println("Hello");
                 directPerc = 1;
-                int rowabove = N-2;
+                int rowabove = N - 2;
                 for (int i = rowabove; i >= 0; i--) {
                     if (full[i][j]) {
                         // StdOut.println("i: " + i + " j: " + j + " " + full[i][j]);
                         directPerc++;
-                    }
-                    else break;
+                    } else break;
                 }
             }
         }
@@ -99,12 +104,12 @@ public class PathFindingOnSquaredGrid {
         for (int i = 0; i < N; i++)
             for (int j = 0; j < N; j++)
                 if (a[i][j] == which) {
-                    if(textCordinates) {
+                    if (textCordinates) {
                         StdDraw.text(j, N - i - 1, "(" + i + "," + j + ")");
                     }
                     StdDraw.square(j, N - i - 1, .5);
 
-                }else StdDraw.filledSquare(j, N-i-1, .5);
+                } else StdDraw.filledSquare(j, N - i - 1, .5);
     }
 
     // draw the N-by-N boolean matrix to standard draw, including the points A (x1, y1) and B (x2,y2) to be marked by a circle
@@ -119,13 +124,12 @@ public class PathFindingOnSquaredGrid {
         for (int i = 0; i < N; i++)
             for (int j = 0; j < N; j++)
                 if (a[i][j] == which)
-                    if ((i == x1 && j == y1) ||(i == x2 && j == y2)) {
+                    if ((i == x1 && j == y1) || (i == x2 && j == y2)) {
                         StdDraw.setPenColor(StdDraw.RED);
-                        StdDraw.filledCircle(j, N-i-1, .5);
+                        StdDraw.filledCircle(j, N - i - 1, .5);
                         StdDraw.setPenColor(StdDraw.BLACK);
-                    }
-                    else StdDraw.square(j, N-i-1, .5);
-                else StdDraw.filledSquare(j, N-i-1, .5);
+                    } else StdDraw.square(j, N - i - 1, .5);
+                else StdDraw.filledSquare(j, N - i - 1, .5);
     }
 
     // return a random N-by-N boolean matrix, where each entry is
@@ -143,72 +147,80 @@ public class PathFindingOnSquaredGrid {
     public static void main(String[] args) {
 
 
-        while(true) {
+        while (true) {
 
-        // boolean[][] open = StdArrayIO.readBoolean2D();
+            // boolean[][] open = StdArrayIO.readBoolean2D();
 
-        // The following will generate a 10x10 squared grid with relatively few obstacles in it
-        // The lower the second parameter, the more obstacles (black cells) are generated
-        boolean[][] randomlyGenMatrix = random(nValue, ratio);
+            // The following will generate a 10x10 squared grid with relatively few obstacles in it
+            // The lower the second parameter, the more obstacles (black cells) are generated
+            randomlyGenMatrix = random(nValue, ratio);
 
-        StdArrayIO.print(randomlyGenMatrix);
-        show(randomlyGenMatrix, true);
+            StdArrayIO.print(randomlyGenMatrix);
+            show(randomlyGenMatrix, true);
 
-        System.out.println();
-        System.out.println("The system percolates: " + percolates(randomlyGenMatrix));
+//        System.out.println();
+//        System.out.println("The system percolates: " + percolates(randomlyGenMatrix));
+//
+//        System.out.println();
+//        System.out.println("The system percolates directly: " + percolatesDirect(randomlyGenMatrix));
+//        System.out.println();
 
-        System.out.println();
-        System.out.println("The system percolates directly: " + percolatesDirect(randomlyGenMatrix));
-        System.out.println();
+            // Reading the coordinates for points A and B on the input squared grid.
 
-        // Reading the coordinates for points A and B on the input squared grid.
+            // THIS IS AN EXAMPLE ONLY ON HOW TO USE THE JAVA INTERNAL WATCH
+            // Start the clock ticking in order to capture the time being spent on inputting the coordinates
+            // You should position this command accordingly in order to perform the algorithmic analysis
 
-        // THIS IS AN EXAMPLE ONLY ON HOW TO USE THE JAVA INTERNAL WATCH
-        // Start the clock ticking in order to capture the time being spent on inputting the coordinates
-        // You should position this command accordingly in order to perform the algorithmic analysis
-
-
-
-
-            boolean validCordinates=false;
-            int Ai=0,Aj=0,Bi=0,Bj=0;
+            System.out.println("******************************************************************************************************************");
+            System.out.println("\n\n\t\t\t\t\t\t\t\t T H E _S H O R T E S T _ P A T H \n\n");
+            System.out.println("******************************************************************************************************************");
+            boolean validCordinates = false;
+            int Ai = 0, Aj = 0, Bi = 0, Bj = 0;
             Scanner in = new Scanner(System.in);
+            int inputCount = 0;
 
-            do{
+            do {
+                if (inputCount != 0) {
+                    System.out.println("\n\t\tP L E A S E _ E N T E R _ V A L I D _ C O R D I N A T E S\n");
+                }
+
+                inputCount++;
 
 
-
-                System.out.println("\nEnter i for A > ");
-                 Ai = in.nextInt();
-                if(Ai>=nValue){
-                    System.out.println("\n\tplease re-enter coordinates below "+nValue);
+                System.out.println("\nEnter i for    S T A R T I N G _ P O I N T :");
+                Ai = in.nextInt();
+                if (Ai >= nValue) {
+                    System.out.println("\n\tplease R E - E N T E R coordinates below " + nValue);
                     continue;
                 }
 
-                System.out.println("Enter j for A > ");
-                 Aj = in.nextInt();
-                if(Aj>=nValue){
-                    System.out.println("\n\tplease re-enter coordinates below "+nValue);
+                System.out.println("Enter j for    S T A R T I N G _ P O I N T :");
+                Aj = in.nextInt();
+                if (Aj >= nValue) {
+                    System.out.println("\n\tplease R E - E N T E Rcoordinates below " + nValue);
                     continue;
                 }
 
-                System.out.println("Enter i for B > ");
-                 Bi = in.nextInt();
-                if(Bi>=nValue){
-                    System.out.println("\n\tplease re-enter coordinates below "+nValue);
+                System.out.println("Enter i for    E N D _ P O I N T  :");
+                Bi = in.nextInt();
+                if (Bi >= nValue) {
+                    System.out.println("\n\tplease R E - E N T E R coordinates below " + nValue);
                     continue;
                 }
 
-                System.out.println("Enter j for B > ");
-                 Bj = in.nextInt();
-                if(Bj>=nValue){
-                    System.out.println("\n\tplease re-enter coordinates below "+nValue);
+                System.out.println("Enter j for    E N D _ P O I N T :");
+                Bj = in.nextInt();
+                if (Bj >= nValue) {
+                    System.out.println("\n\tplease R E - E N T E R coordinates below " + nValue);
                     continue;
-                }else{
-                    validCordinates=true;
+                } else {
+                    validCordinates = true;
                 }
 
-            }while(validCordinates==false);
+            }
+            while ((validCordinates == false) || randomlyGenMatrix[Ai][Aj] == false || randomlyGenMatrix[Bi][Bj] == false);
+
+            inputCount = 0;
 
             // THIS IS AN EXAMPLE ONLY ON HOW TO USE THE JAVA INTERNAL WATCH
             // Stop the clock ticking in order to capture the time being spent on inputting the coordinates
@@ -271,13 +283,13 @@ public class PathFindingOnSquaredGrid {
                 }
             }
 
-            System.out.println("\n\n\tpress 0 to exit ");
+            System.out.println("\n\n\t\tP R E S S _ 0 _ T O _ E X I T");
 
-            System.out.println("\n\n\tpress 0 natuwa wena ekk to continue ");
+            System.out.println("\n\n\t\tP R E S S _ A N Y _ (E X C E P T _ 0) _ T O _ C O N T I N U E");
 
             String commnd = in.next();
             StdDraw.clear();
-            if (commnd.equals("0")){
+            if (commnd.equals("0")) {
                 System.exit(0);
             }
 
