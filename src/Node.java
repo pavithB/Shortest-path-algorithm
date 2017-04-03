@@ -31,7 +31,7 @@ public class Node {
     //this variable to identify the node is a block node or not
     boolean blocked;
 
-
+    //add getters and setters to access above private attributes of the node class
     public int getI() {
         return i;
     }
