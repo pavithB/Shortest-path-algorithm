@@ -32,6 +32,7 @@ public class Node {
     boolean blocked;
 
     //add getters and setters to access above private attributes of the node class
+
     public int getI() {
         return i;
     }
@@ -39,6 +40,8 @@ public class Node {
     public void setI(int i) {
         this.i = i;
     }
+
+
 
     public int getJ() {
         return j;
@@ -48,6 +51,8 @@ public class Node {
         this.j = j;
     }
 
+
+
     public double gethValue() {
         return hValue;
     }
@@ -55,6 +60,8 @@ public class Node {
     public void sethValue(double hValue) {
         this.hValue = hValue;
     }
+
+
 
     public double getgValue() {
         return gValue;
@@ -64,6 +71,8 @@ public class Node {
         this.gValue = gValue;
     }
 
+
+
     public double getfValue() {
         return fValue;
     }
@@ -71,6 +80,8 @@ public class Node {
     public void setfValue(double fValue) {
         this.fValue = fValue;
     }
+
+
 
     public Node getParent() {
         return parent;
@@ -80,6 +91,8 @@ public class Node {
         this.parent = parent;
     }
 
+
+
     public boolean isVisited() {
         return visited;
     }
@@ -87,6 +100,8 @@ public class Node {
     public void setVisited(boolean visited) {
         this.visited = visited;
     }
+
+
 
     public boolean isBlocked() {
         return blocked;
