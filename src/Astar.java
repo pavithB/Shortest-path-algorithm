@@ -30,13 +30,11 @@ public class Astar {
     static String choice;
 
 
-    public ArrayList<Node> ShortestPath(boolean[][] matrix, int si, int sj, int ei, int ej) {
+    public ArrayList<Node> ShortestPath(boolean[][] matrix, int si, int sj, int ei, int ej,String choices) {
 
 
-        System.out.println("******************************************************************************************************************");
-        System.out.println("\n\n\t\tC H O O S E _ A _ M E T R I C _ F O R _ C A L C U L A T E _ T H E _ D I S T A N C E: \n\n\t\t\t\t\t1)Euclidean distance \n\n\t\t\t\t\t2)Manhattan distance\n\n\t\t\t\t\t3)Chebyshev distance\n");
-        Scanner sc = new Scanner(System.in);
-        choice = sc.next();
+         Scanner sc = new Scanner(System.in);
+        choice = choices;
 
         switch (choice) {
             case "1":
@@ -57,7 +55,10 @@ public class Astar {
                 break;
         }
 
-        Stopwatch timerFlow = new Stopwatch();
+
+
+
+        long starttime = System.nanoTime();
         int size = matrix.length;
 
 
@@ -281,13 +282,14 @@ public class Astar {
             System.out.println("******************************************************************************************************************");
             System.out.println("\n\t\t\t\tT O T A L _ C O S T : " + pathCost);
             System.out.println("\n******************************************************************************************************************");
-            StdOut.println("\t\t*time taken to evaluate the shortest path  = " + timerFlow.elapsedTime() + "ms");
 
+            long spentTime = (System.nanoTime() - starttime) ;
+            StdOut.println("\t\t*time taken to evaluate the shortest path  = " + spentTime + "ns");
         } else {
             System.out.println("******************************************************************************************************************");
             System.out.println("\n\n:(\t\t\t\tN O _ P O S S I B L E _ P A T H \n\n");
             System.out.println("******************************************************************************************************************");
-            StdOut.println("\t\t*time taken to evaluate = " + timerFlow.elapsedTime() + "ms");
+//            StdOut.println("\t\t*time taken to evaluate = " + timerFlow.elapsedTime() + "ms");
 
         }
 

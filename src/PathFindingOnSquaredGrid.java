@@ -20,7 +20,7 @@ public class PathFindingOnSquaredGrid {
 
 
     static  int nValue = 10;
-    static final double ratio = 1;
+    static final double ratio = 0.8;
 //    static final boolean textCordinates = true;
 
     // given an N-by-N matrix of open cells, return an N-by-N matrix
@@ -28,6 +28,10 @@ public class PathFindingOnSquaredGrid {
 
 
     static boolean[][] randomlyGenMatrix;
+
+    static String choice;
+
+
 
 
     public static boolean[][] flow(boolean[][] open) {
@@ -176,11 +180,12 @@ public class PathFindingOnSquaredGrid {
 
 
         while (true) {
+            //start of the main method
             System.out.println("******************************************************************************************************************");
             System.out.println("\n\n\t\t\t\t\t\t\t\t T H E _S H O R T E S T _ P A T H \n\n");
             System.out.println("******************************************************************************************************************");
 
-
+//get user value to set the size of the grid and set it
             Scanner in = new Scanner(System.in);
             System.out.println("\nE N T E R _ T H E _ S I Z E _ O F _ T H E _ G R I D :");
             nValue = in.nextInt();
@@ -207,12 +212,12 @@ public class PathFindingOnSquaredGrid {
             // Start the clock ticking in order to capture the time being spent on inputting the coordinates
             // You should position this command accordingly in order to perform the algorithmic analysis
 
-
+//this part to get cordinates for start node and end note , to that we use user inputs ,
             boolean validCordinates = false;
             int Ai = 0, Aj = 0, Bi = 0, Bj = 0;
 
             int inputCount = 0;
-
+//this while loop continue loop until usr enter valid cordinants , and thos nodes cant be a black nodes
             do {
                 if (inputCount != 0) {
                     System.out.println("\n\t\tP L E A S E _ E N T E R _ V A L I D _ C O R D I N A T E S\n");
@@ -220,10 +225,11 @@ public class PathFindingOnSquaredGrid {
 
                 inputCount++;
 
-
+//get cordinanets for i and j axix for starting point and end point
                 System.out.println("\nEnter i for    S T A R T I N G _ P O I N T :");
                 Ai = in.nextInt();
                 if (Ai >= nValue) {
+//                    if user enter less number thatn the grid size
                     System.out.println("\n\tplease R E - E N T E R coordinates below " + nValue);
                     continue;
                 }
@@ -256,6 +262,26 @@ public class PathFindingOnSquaredGrid {
 
             inputCount = 0;
 
+            String choices = "" ;
+            System.out.println("******************************************************************************************************************");
+            System.out.println("\n\n\t\tC H O O S E _ A _ M E T R I C _ F O R _ C A L C U L A T E _ T H E _ D I S T A N C E: \n\n\t\t\t\t\t1)Euclidean distance \n\n\t\t\t\t\t2)Manhattan distance\n\n\t\t\t\t\t3)Chebyshev distance\n");
+            choice = in.next();
+            switch (choice) {
+                case "1":
+                    choices="1";
+                    break;
+                case "2":
+                    choices="2";
+                    break;
+                case "3":
+                    choices="3";
+
+                    break;
+                default:
+
+                    break;
+            }
+
             // THIS IS AN EXAMPLE ONLY ON HOW TO USE THE JAVA INTERNAL WATCH
             // Stop the clock ticking in order to capture the time being spent on inputting the coordinates
             // You should position this command accordingly in order to perform the algorithmic analysis
@@ -266,13 +292,16 @@ public class PathFindingOnSquaredGrid {
 
             show(randomlyGenMatrix, true, Ai, Aj, Bi, Bj);
 
-
+//create a object of astar class
             Astar testing = new Astar();
 
-            ArrayList<Node> path = testing.ShortestPath(randomlyGenMatrix, Ai, Aj, Bi, Bj);
+//create path array and make retunr the paths
+            Stopwatch timerFlow = new Stopwatch();
+            ArrayList<Node> path = testing.ShortestPath(randomlyGenMatrix, Ai, Aj, Bi, Bj,choices);
 //        ArrayList<Node> path = new Astar().ShortestPath(randomlyGenMatrix, Ai, Aj, Bi, Bj);
 
             ArrayList<Node> testarray = testing.testing();
+
             StdDraw.setPenColor(Color.green);
 
             int i = 0;
@@ -283,22 +312,22 @@ public class PathFindingOnSquaredGrid {
 
             for (Node dd : testarray) {
 
-                try {
-                    TimeUnit.MILLISECONDS.sleep(100);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+//                try {
+//                    TimeUnit.MILLISECONDS.sleep(100);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
 
                 StdDraw.filledSquare(dd.getJ(), nValue - dd.getI() - 1, .5);
             }
             StdDraw.setPenColor(Color.RED);
             for (Node node : path) {
 
-                try {
-                    TimeUnit.MILLISECONDS.sleep(100);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+//                try {
+//                    TimeUnit.MILLISECONDS.sleep(100);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
 
                 if (i == 0) {
                     i++;
@@ -316,6 +345,7 @@ public class PathFindingOnSquaredGrid {
 
                 }
             }
+            StdOut.println("\t\t*time taken to evaluate the shortest path  = " + timerFlow.elapsedTime() + "ms");
             showfinal(randomlyGenMatrix, true, Ai, Aj, Bi, Bj);
 
             System.out.println("\n\n\t\tP R E S S _ 0 _ T O _ E X I T");
