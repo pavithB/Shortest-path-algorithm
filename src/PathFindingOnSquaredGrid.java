@@ -20,7 +20,7 @@ public class PathFindingOnSquaredGrid {
 
 
     static  int nValue = 10;
-    static final double ratio = 0.8;
+    static final double ratio = 1;
 //    static final boolean textCordinates = true;
 
     // given an N-by-N matrix of open cells, return an N-by-N matrix
@@ -105,7 +105,12 @@ public class PathFindingOnSquaredGrid {
         for (int i = 0; i < N; i++)
             for (int j = 0; j < N; j++)
                 if (a[i][j] == which) {
-                    if (nValue<13) {
+                    if(nValue>=15 && nValue<22){
+                        StdDraw.setFont(new Font("TimesRoman", Font.BOLD , 8));
+                        StdDraw.text(j, N - i - 1, "(" + i + "," + j + ")");
+                    }
+                    if (nValue<15) {
+                        StdDraw.setFont(new Font("TimesRoman", Font.BOLD , 10));
                         StdDraw.text(j, N - i - 1, "(" + i + "," + j + ")");
                     }
                     StdDraw.square(j, N - i - 1, .5);
