@@ -28,7 +28,7 @@ public class Node {
     // this variable to check the node is already visited or not
     boolean visited;
 
-
+    //this variable to identify the node is a block node or not
     boolean blocked;
 
 
