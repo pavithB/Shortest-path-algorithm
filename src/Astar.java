@@ -129,7 +129,7 @@ public class Astar {
         // Queue to store visiting nodes
         Queue<Node> openList = new PriorityQueue<>(size, adjacencyComparator);
 
-
+        //first add start node to the openList array
         openList.add(start);
 
         while (openList.size() > 0) {
