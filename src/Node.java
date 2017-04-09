@@ -3,6 +3,8 @@
  * UOW no - w1608462
  * IIT no -2015238
  */
+
+//this class to represent a node in the grid
 public class Node {
 
     //i coordinates for the node
