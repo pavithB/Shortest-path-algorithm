@@ -137,6 +137,8 @@ public class Astar {
 
             //remove the head element (first element ) of the queue and assign that node to current variable
             Node current = openList.remove();
+
+            //this variable to store neighbour nodes temporally
             Node temp;
 
 
