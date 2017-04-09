@@ -132,6 +132,7 @@ public class Astar {
         //first add start node to the openList array
         openList.add(start);
 
+        //this loop the code block while the openlist array list get empty
         while (openList.size() > 0) {
 
 
