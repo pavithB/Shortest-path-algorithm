@@ -132,10 +132,10 @@ public class Astar {
         //first add start node to the openList array
         openList.add(start);
 
-        //this loop the code block while the openlist array list get empty
+        //this loop the code block while the openlist array list get empty it means each reachable node already visited
         while (openList.size() > 0) {
 
-
+            //remove the head element (first element ) of the queue and assign that node to current variable
             Node current = openList.remove();
             Node temp;
 
