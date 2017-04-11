@@ -38,8 +38,8 @@
       <file leaf-file-name="Astar.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Astar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="203" column="133" selection-start-line="203" selection-start-column="133" selection-end-line="203" selection-end-column="133" />
+            <state relative-caret-position="499">
+              <caret line="219" column="133" selection-start-line="219" selection-start-column="133" selection-end-line="219" selection-end-column="133" />
               <folding />
             </state>
           </provider>
@@ -744,14 +744,7 @@
       <workItem from="1492800659347" duration="7473000" />
       <workItem from="1492842758877" duration="8081000" />
       <workItem from="1492870962840" duration="3505000" />
-      <workItem from="1492887559885" duration="4021000" />
-    </task>
-    <task id="LOCAL-00025" summary="add manhattan, euclidean , Chebyshev distance to a* algorithm">
-      <created>1491075753075</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1491075753075</updated>
+      <workItem from="1492887559885" duration="4030000" />
     </task>
     <task id="LOCAL-00026" summary="add manhattan, euclidean , Chebyshev distance to a* algorithm">
       <created>1491077453761</created>
@@ -1089,11 +1082,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491949051801</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="commenting ( date* 2017/ 4/ 23 )">
+      <created>1491949060887</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1491949060887</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="178169000" />
+    <option name="totallyTimeSpent" value="178178000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1511,8 +1511,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Astar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="203" column="133" selection-start-line="203" selection-start-column="133" selection-end-line="203" selection-end-column="133" />
+        <state relative-caret-position="499">
+          <caret line="219" column="133" selection-start-line="219" selection-start-column="133" selection-end-line="219" selection-end-column="133" />
           <folding />
         </state>
       </provider>
