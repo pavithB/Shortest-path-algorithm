@@ -142,7 +142,8 @@ public class Astar {
             Node temp;
 
 
-            // Top
+            //TOP
+            //if current node not in the top row check and add top neighbour nodes
             if (current.getI() - 1 >= 0) {
 
                 // Top Top
