@@ -183,10 +183,11 @@ public class PathFindingOnSquaredGrid {
         while (true) {
             //start of the main method
             System.out.println("******************************************************************************************************************");
-            System.out.println("\n\n\t\t\t\t\t\t\t\t T H E _S H O R T E S T _ P A T H \n\n");
+            System.out.println("\n\n\t\t\t\t\t\t\t\t T H E _S H O R T E S T _ P A T H - ft . A* \n\n");
             System.out.println("******************************************************************************************************************");
 
 //get user value to set the size of the grid and set it
+
             Scanner in = new Scanner(System.in);
             System.out.println("\nE N T E R _ T H E _ S I Z E _ O F _ T H E _ G R I D :");
             nValue = in.nextInt();
@@ -302,13 +303,13 @@ public class PathFindingOnSquaredGrid {
 //        ArrayList<Node> path = new Astar().ShortestPath(randomlyGenMatrix, Ai, Aj, Bi, Bj);
 
             ArrayList<Node> testarray = testing.testing();
-
+//set drawer pen green
             StdDraw.setPenColor(Color.green);
 
             int i = 0;
             int prex = 0;
             int prey = 0;
-
+//revers the path arraylist elements
             Collections.reverse(path);
 
             for (Node dd : testarray) {
