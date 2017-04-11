@@ -147,7 +147,7 @@ public class Astar {
             if (current.getI() - 1 >= 0) {
 
                 // TOP - TOP
-
+                //assign top value as the temp node (temporally neighbour)
                 temp = nodeGrid[current.getI() - 1][current.getJ()];
                 if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + normalDistance) {
 
