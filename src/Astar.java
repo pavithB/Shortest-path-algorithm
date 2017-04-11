@@ -146,7 +146,8 @@ public class Astar {
             //if current node not in the top row check and add top neighbour nodes
             if (current.getI() - 1 >= 0) {
 
-                // Top Top
+                // TOP - TOP
+
                 temp = nodeGrid[current.getI() - 1][current.getJ()];
                 if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + normalDistance) {
 

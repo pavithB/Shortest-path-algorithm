@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11b43a4e-f3e3-4e09-b47d-c87ced1d25ab" name="Default" comment="commenting ( date* 2017/ 4/ 23 )">
+    <list default="true" id="11b43a4e-f3e3-4e09-b47d-c87ced1d25ab" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Astar.java" afterPath="$PROJECT_DIR$/src/Astar.java" />
     </list>
@@ -38,8 +38,8 @@
       <file leaf-file-name="Astar.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Astar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="145" column="82" selection-start-line="145" selection-start-column="82" selection-end-line="145" selection-end-column="82" />
+            <state relative-caret-position="187">
+              <caret line="149" column="16" selection-start-line="149" selection-start-column="16" selection-end-line="149" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -744,14 +744,7 @@
       <workItem from="1492800659347" duration="7473000" />
       <workItem from="1492842758877" duration="8081000" />
       <workItem from="1492870962840" duration="3505000" />
-      <workItem from="1492887559885" duration="3613000" />
-    </task>
-    <task id="LOCAL-00019" summary="done with a*">
-      <created>1491051702327</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1491051702327</updated>
+      <workItem from="1492887559885" duration="3621000" />
     </task>
     <task id="LOCAL-00020" summary="done with a*">
       <created>1491051765507</created>
@@ -1089,11 +1082,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491775596825</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="commenting ( date* 2017/ 4/ 23 )">
+      <created>1491948651449</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1491948651449</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177761000" />
+    <option name="totallyTimeSpent" value="177769000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1511,8 +1511,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Astar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="145" column="82" selection-start-line="145" selection-start-column="82" selection-end-line="145" selection-end-column="82" />
+        <state relative-caret-position="187">
+          <caret line="149" column="16" selection-start-line="149" selection-start-column="16" selection-end-line="149" selection-end-column="16" />
           <folding />
         </state>
       </provider>
