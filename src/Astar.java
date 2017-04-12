@@ -181,6 +181,7 @@ public class Astar {
                     }
 
                     // Top Right
+                    //assign top right value as the temp node (temporally neighbour)
                     if (current.getJ() + 1 < size) {
                         temp = nodeGrid[current.getI() - 1][current.getJ() + 1];
                         //check that temp node is already visited , is it a blocked node or its old f value is less than new f value if it is skip that node
