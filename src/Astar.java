@@ -236,6 +236,7 @@ public class Astar {
             if (current.getI() + 1 < size) {
 
                 // Down Down
+                //assign down value as the temp node (temporally neighbour)
                 temp = nodeGrid[current.getI() + 1][current.getJ()];
                 //check that temp node is already visited , is it a blocked node or its old f value is less than new f value if it is skip that node
                 //if it's not visited , not blocked or old f value not less than new f value then check and add that node to openlist
