@@ -164,6 +164,7 @@ public class Astar {
                 if (isManhattan) {
 
                     // Top Left
+                    //assign top left value as the temp node (temporally neighbour)
                     if (current.getJ() - 1 > 0) {
                         temp = nodeGrid[current.getI() - 1][current.getJ() - 1];
                         //check that temp node is already visited , is it a blocked node or its old f value is less than new f value if it is skip that node
