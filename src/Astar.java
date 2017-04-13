@@ -253,6 +253,7 @@ public class Astar {
 
                 if (isManhattan) {
                     // Down Left
+                    //assign down left value as the temp node (temporally neighbour)
                     if (current.getJ() - 1 >= 0) {
                         temp = nodeGrid[current.getI() + 1][current.getJ() - 1];
                         if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + diagonalDistance) {
