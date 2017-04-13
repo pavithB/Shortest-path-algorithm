@@ -268,6 +268,7 @@ public class Astar {
                     }
 
                     // Down Right
+                    //assign right value as the temp node (temporally neighbour)
                     if (current.getJ() + 1 < size) {
                         temp = nodeGrid[current.getI() + 1][current.getJ() + 1];
                         if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + diagonalDistance) {
