@@ -128,6 +128,7 @@ public class Astar {
         };
 
         // Queue to store visiting nodes
+        //in this queue first node will be the node that have least f value among other nodes on the queue
         Queue<Node> openList = new PriorityQueue<>(size, adjacencyComparator);
 
         //first add start node to the openList array
