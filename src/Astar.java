@@ -118,7 +118,7 @@ public class Astar {
         start.setgValue(0);
         start.sethValue(0);
 
-        // a comparator object to deal with Priority Queue
+        // this comparator object for the open list Priority Queue
         Comparator<Node> adjacencyComparator = (left, right) -> {
             if (left.getfValue() > (right.getfValue())) {
                 return 1;
