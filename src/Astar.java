@@ -156,7 +156,8 @@ public class Astar {
                 if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + normalDistance) {
 
                     //call HVneighbor method and send temp node object, current node object and normal distance according to chosen distance calculation methodology
-                    //assign current node is the parent of the temp node
+                    //assign current node is the parent of the temp node (neighbour)
+
                     HVneighbor(temp, current, normalDistance);
                     temp.parent = current;
                     openList.add(temp);
