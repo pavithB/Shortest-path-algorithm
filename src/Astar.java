@@ -157,7 +157,7 @@ public class Astar {
 
                     //call HVneighbor method and send temp node object, current node object and normal distance according to chosen distance calculation methodology
                     //assign current node is the parent of the temp node (neighbour)
-
+                    //add temp node (neighbour) to the openlist queue
                     HVneighbor(temp, current, normalDistance);
                     temp.parent = current;
                     openList.add(temp);
