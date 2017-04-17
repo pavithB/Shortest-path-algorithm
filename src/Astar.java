@@ -305,6 +305,7 @@ public class Astar {
                 }
             }
 
+            //mark current node as a visited node.
             current.visited = true;
             closedList.add(current);
             if (current.getI() == end.getI() && current.getJ() == end.getJ()) {
