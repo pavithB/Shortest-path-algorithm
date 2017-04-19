@@ -20,7 +20,7 @@ public class PathFindingOnSquaredGrid {
 
 
     static  int nValue = 10;
-    static final double ratio = 1;
+    static final double ratio = 0.8;
 //    static final boolean textCordinates = true;
 
     // given an N-by-N matrix of open cells, return an N-by-N matrix
@@ -312,22 +312,22 @@ public class PathFindingOnSquaredGrid {
 
             for (Node dd : testarray) {
 
-//                try {
-//                    TimeUnit.MILLISECONDS.sleep(100);
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
+                try {
+                    TimeUnit.MILLISECONDS.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
 
                 StdDraw.filledSquare(dd.getJ(), nValue - dd.getI() - 1, .5);
             }
             StdDraw.setPenColor(Color.RED);
             for (Node node : path) {
 
-//                try {
-//                    TimeUnit.MILLISECONDS.sleep(100);
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
+                try {
+                    TimeUnit.MILLISECONDS.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
 
                 if (i == 0) {
                     i++;

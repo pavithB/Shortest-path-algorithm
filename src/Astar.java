@@ -7,6 +7,7 @@ import java.util.*;
  */
 public class Astar {
 
+    //this array list add nodes that need to visit
     ArrayList<Node> openList = new ArrayList<Node>();
     ArrayList<Node> closedList = new ArrayList<Node>();
 
