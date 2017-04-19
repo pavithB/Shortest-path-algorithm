@@ -19,6 +19,7 @@ public class Astar {
     Node current;
     //this node will be a parent node for the current node what mention above
     Node temp;
+    //this start variable to initialize starting node of the grid, ( first point given user )
     Node start;
     Node end;
     Node[][] nodeGrid;
