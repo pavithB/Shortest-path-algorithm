@@ -21,6 +21,7 @@ public class Astar {
     Node temp;
     //this start variable to initialize starting node of the grid, ( first point given user )
     Node start;
+    //this end variable to initialize destination node of the grid, ( second point given user )
     Node end;
     Node[][] nodeGrid;
 
