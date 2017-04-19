@@ -287,7 +287,6 @@ public class Astar {
                 path.add(current.parent);
                 current = current.parent;
 
-
             }
 
             System.out.println("******************************************************************************************************************");

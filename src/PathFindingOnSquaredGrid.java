@@ -18,8 +18,9 @@ import java.util.concurrent.TimeUnit;
 
 public class PathFindingOnSquaredGrid {
 
-
+//initial value for grid (n*n)
     static  int nValue = 10;
+    //initial size for block nodes ratio
     static final double ratio = 0.8;
 //    static final boolean textCordinates = true;
 
