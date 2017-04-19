@@ -5,7 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/algo cw/PathFindingOnSquaredGrid.class" afterPath="$PROJECT_DIR$/out/production/algo cw/PathFindingOnSquaredGrid.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Astar.java" afterPath="$PROJECT_DIR$/src/Astar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PathFindingOnSquaredGrid.java" afterPath="$PROJECT_DIR$/src/PathFindingOnSquaredGrid.java" />
     </list>
     <ignored path="AlgoCW.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,8 +41,8 @@
       <file leaf-file-name="Astar.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Astar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+            <state relative-caret-position="187">
+              <caret line="11" column="127" selection-start-line="11" selection-start-column="127" selection-end-line="11" selection-end-column="127" />
               <folding />
             </state>
           </provider>
@@ -731,7 +730,7 @@
       <workItem from="1491325842534" duration="1649000" />
       <workItem from="1491409157315" duration="179000" />
       <workItem from="1491535390357" duration="1978000" />
-      <workItem from="1492604688146" duration="1875000" />
+      <workItem from="1492604688146" duration="1975000" />
     </task>
     <task id="LOCAL-00001" summary="change colors&#10;">
       <created>1490818993439</created>
@@ -992,11 +991,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491409222096</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="commenting">
+      <created>1492618822685</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1492618822685</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145496000" />
+    <option name="totallyTimeSpent" value="145596000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1092,7 +1098,8 @@
     <MESSAGE value="seperate the method  neughbor as 2 methods" />
     <MESSAGE value="finalize the code with only astar" />
     <MESSAGE value="finalize the code with only astar new" />
-    <option name="LAST_COMMIT_MESSAGE" value="finalize the code with only astar new" />
+    <MESSAGE value="commenting" />
+    <option name="LAST_COMMIT_MESSAGE" value="commenting" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1457,8 +1464,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Astar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+        <state relative-caret-position="187">
+          <caret line="11" column="127" selection-start-line="11" selection-start-column="127" selection-end-line="11" selection-end-column="127" />
           <folding />
         </state>
       </provider>

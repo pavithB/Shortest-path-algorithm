@@ -9,6 +9,7 @@ public class Astar {
 
     //this array list add nodes that need to visit
     ArrayList<Node> openList = new ArrayList<Node>();
+    //this array list to add nodes that already visited, once node added to this node we never going to revisit that node again
     ArrayList<Node> closedList = new ArrayList<Node>();
 
     ArrayList<Node> test = new ArrayList<Node>();
