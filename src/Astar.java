@@ -17,6 +17,7 @@ public class Astar {
 
     //this variable for identify the current node on the grid
     Node current;
+    //this node will be a parent node for the current node what mention above
     Node temp;
     Node start;
     Node end;
