@@ -41,8 +41,8 @@
       <file leaf-file-name="Astar.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Astar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="127" selection-start-line="11" selection-start-column="127" selection-end-line="11" selection-end-column="127" />
+            <state relative-caret-position="238">
+              <caret line="14" column="137" selection-start-line="14" selection-start-column="137" selection-end-line="14" selection-end-column="137" />
               <folding />
             </state>
           </provider>
@@ -730,7 +730,7 @@
       <workItem from="1491325842534" duration="1649000" />
       <workItem from="1491409157315" duration="179000" />
       <workItem from="1491535390357" duration="1978000" />
-      <workItem from="1492604688146" duration="1975000" />
+      <workItem from="1492604688146" duration="2088000" />
     </task>
     <task id="LOCAL-00001" summary="change colors&#10;">
       <created>1490818993439</created>
@@ -998,11 +998,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492618822685</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="commenting">
+      <created>1492618918763</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1492618918763</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145596000" />
+    <option name="totallyTimeSpent" value="145709000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1464,8 +1471,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Astar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="127" selection-start-line="11" selection-start-column="127" selection-end-line="11" selection-end-column="127" />
+        <state relative-caret-position="238">
+          <caret line="14" column="137" selection-start-line="14" selection-start-column="137" selection-end-line="14" selection-end-column="137" />
           <folding />
         </state>
       </provider>

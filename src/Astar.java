@@ -12,6 +12,7 @@ public class Astar {
     //this array list to add nodes that already visited, once node added to this node we never going to revisit that node again
     ArrayList<Node> closedList = new ArrayList<Node>();
 
+    // this is an additional array list maintain for visualize the visiting nodes, to find the path we dont need to keep this array list
     ArrayList<Node> test = new ArrayList<Node>();
 
     Node current;
