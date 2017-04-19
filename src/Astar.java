@@ -29,6 +29,7 @@ public class Astar {
 
 //    int z;
 
+    //to get the final cost of the shortest path
     double pathCost = 0;
     double diagonalDistance;
     double normalDistance;
