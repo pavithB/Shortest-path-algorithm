@@ -33,7 +33,7 @@ public class Astar {
     double pathCost = 0;
     //distance that need to increment for diagonal move
     double diagonalDistance;
-
+    //distance that need to increment for non-diagonal move
     double normalDistance;
 
     boolean isfound = false;
