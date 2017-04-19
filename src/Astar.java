@@ -31,7 +31,9 @@ public class Astar {
 
     //to get the final cost of the shortest path
     double pathCost = 0;
+    //distance that need to increment for diagonal move
     double diagonalDistance;
+
     double normalDistance;
 
     boolean isfound = false;
