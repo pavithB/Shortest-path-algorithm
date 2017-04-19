@@ -23,6 +23,7 @@ public class Astar {
     Node start;
     //this end variable to initialize destination node of the grid, ( second point given user )
     Node end;
+    //this 2d array  represent the  generated grid of nodes
     Node[][] nodeGrid;
 
 
