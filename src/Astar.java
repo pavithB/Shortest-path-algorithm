@@ -15,6 +15,7 @@ public class Astar {
     // this is an additional array list maintain for visualize the visiting nodes, to find the path we dont need to keep this array list
     ArrayList<Node> test = new ArrayList<Node>();
 
+    //this variable for identify the current node on the grid
     Node current;
     Node temp;
     Node start;
