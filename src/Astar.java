@@ -312,7 +312,7 @@ public class Astar {
             closedList.add(current);
 
             //check that destination node is found or not , if found break the while loop
-            //
+            //if destination(finish) node isn't found yet continue the while loop
             if (current.getI() == end.getI() && current.getJ() == end.getJ()) {
                 isfound = true;
                 break;
