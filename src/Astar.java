@@ -336,9 +336,9 @@ public class Astar {
 
             //add destination node to the path array list
             Node current = nodeGrid[end.getI()][end.getJ()];
-
-
             path.add(current);
+
+            //calculate the cost of the shortest path using sum of g-values of path nodes
             pathCost = pathCost + current.getgValue();
 
             while (current.parent != null) {
