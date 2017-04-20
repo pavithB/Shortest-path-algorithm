@@ -27,9 +27,9 @@ public class PathFindingOnSquaredGrid {
     // given an N-by-N matrix of open cells, return an N-by-N matrix
     // of cells reachable from the top
 
-
+//generate grid matrix with black and white(block and non-block) cells
     static boolean[][] randomlyGenMatrix;
-
+//this variable to get and store the distance calculation method
     static String choice;
 
 
