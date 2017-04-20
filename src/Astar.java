@@ -305,9 +305,14 @@ public class Astar {
                 }
             }
 
-            //mark current node as a visited node.visited nodes are not going to add again as neighbour node to the open list
+            //mark current node as a visited node.visited nodes are not going to add again as neighbour node to the openList queue
             current.visited = true;
+
+            //remove current node from the openList queue
             closedList.add(current);
+
+            //check that destination node is found or not , if found break the while loop
+            //
             if (current.getI() == end.getI() && current.getJ() == end.getJ()) {
                 isfound = true;
                 break;
