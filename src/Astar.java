@@ -329,9 +329,9 @@ public class Astar {
         //create new array list that conatin the  return the shortest
         ArrayList<Node> path = new ArrayList<>();
 
-        // Checking if a path exists
+        // first check that path is exists or not
         if (!(nodeGrid[end.getI()][end.getJ()].getfValue() == Integer.MAX_VALUE)) {
-            //Trace back the path
+            //Trace back the path using parent nodes
             Node current = nodeGrid[end.getI()][end.getJ()];
             path.add(current);
             pathCost = pathCost + current.getgValue();
