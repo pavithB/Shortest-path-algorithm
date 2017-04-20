@@ -305,7 +305,7 @@ public class Astar {
                 }
             }
 
-            //mark current node as a visited node.
+            //mark current node as a visited node.visited nodes are not going to add again as neighbour node to the open list
             current.visited = true;
             closedList.add(current);
             if (current.getI() == end.getI() && current.getJ() == end.getJ()) {
