@@ -317,6 +317,7 @@ public class Astar {
                 isfound = true;
                 break;
             }
+            //end of while loop
         }
 
 
