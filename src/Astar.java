@@ -326,6 +326,7 @@ public class Astar {
 ////            closedList.clear();
 //        }
 
+        //create new array list that conatin the  return the shortest
         ArrayList<Node> path = new ArrayList<>();
 
         // Checking if a path exists
