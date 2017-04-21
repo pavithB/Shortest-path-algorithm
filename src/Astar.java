@@ -397,12 +397,13 @@ public class Astar {
 
         double di, dj, temph = 0;
 
-        //if user select Euclidean   calculate the h cost
+        //if user select Euclidean calculate the h cost
         if (choice.equals("1")) {
 
             temph = (Math.sqrt(Math.pow((temp.getI() - end.getI()), 2) + Math.pow((temp.getJ() - end.getJ()), 2)));
 
 
+            //if user select Manhattan  calculate the h cost
         } else if (choice.equals("2")) {
 
 
@@ -411,6 +412,7 @@ public class Astar {
             temph = 1 * (di + dj);
 
 
+            //if user select Chebyshev calculate the h cost
         } else if (choice.equals("3")) {
 
             temph = Math.max(Math.abs(temp.getI() - end.getI()), Math.abs(temp.getJ() - end.getJ()));
@@ -418,8 +420,10 @@ public class Astar {
 
         }
 
+        //calculate the g value
         double tempg = current.getgValue() + distance;
 
+        //set g value, h value and f value
         temp.setgValue(tempg);
         temp.sethValue(temph);
         temp.setfValue(tempg + temph);
