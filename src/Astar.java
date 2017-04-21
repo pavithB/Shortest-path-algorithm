@@ -382,6 +382,7 @@ public class Astar {
 
     }
 
+    //this method return the test array list that contain all neighbour nodes added to the openList queue
     public ArrayList<Node> testing() {
         return test;
 
