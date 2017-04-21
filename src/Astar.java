@@ -362,14 +362,15 @@ public class Astar {
 
 
 
-
+            //if there isn't a path between start and end nodes
         } else {
             System.out.println("******************************************************************************************************************");
             System.out.println("\n\n:(\t\t\t\tN O _ P O S S I B L E _ P A T H \n\n");
             System.out.println("******************************************************************************************************************");
-            StdOut.println("\t\t*time taken to evaluate = " + timerFlow.elapsedTime() + "ms");
-
         }
+
+        //calculate the time from milli seconds  that taken to get the shortest path
+        StdOut.println("\t\t*time taken to evaluate = " + timerFlow.elapsedTime() + "ms");
 
 //        StdDraw.setPenColor(Color.black);
 //        StdDraw.text(end.x, 10-end.y-1, "cost="+(int)fcost);
