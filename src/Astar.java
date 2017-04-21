@@ -47,6 +47,9 @@ public class Astar {
      **/
     public ArrayList<Node> ShortestPath(boolean[][] matrix, int si, int sj, int ei, int ej, String choices) {
 
+
+        Stopwatch timerFlow = new Stopwatch();
+
 /*create scanner object
          Scanner sc = new Scanner(System.in);*/
 
@@ -354,12 +357,12 @@ public class Astar {
             System.out.println("\n******************************************************************************************************************");
 
             long spentTime = (System.nanoTime() - starttime);
-            StdOut.println("\t\t*time taken to evaluate the shortest path  = " + spentTime + "ns");
+//            StdOut.println("\t\t*time taken to evaluate the shortest path  = " + spentTime + "ns");
         } else {
             System.out.println("******************************************************************************************************************");
             System.out.println("\n\n:(\t\t\t\tN O _ P O S S I B L E _ P A T H \n\n");
             System.out.println("******************************************************************************************************************");
-//            StdOut.println("\t\t*time taken to evaluate = " + timerFlow.elapsedTime() + "ms");
+            StdOut.println("\t\t*time taken to evaluate = " + timerFlow.elapsedTime() + "ms");
 
         }
 
