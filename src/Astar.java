@@ -356,8 +356,13 @@ public class Astar {
             System.out.println("\n\t\t\t\tT O T A L _ C O S T : " + pathCost);
             System.out.println("\n******************************************************************************************************************");
 
+            /*calculate the time from nano seconds that taken to get the shortest path
             long spentTime = (System.nanoTime() - starttime);
-//            StdOut.println("\t\t*time taken to evaluate the shortest path  = " + spentTime + "ns");
+            StdOut.println("\t\t*time taken to evaluate the shortest path  = " + spentTime + "ns");*/
+
+
+
+
         } else {
             System.out.println("******************************************************************************************************************");
             System.out.println("\n\n:(\t\t\t\tN O _ P O S S I B L E _ P A T H \n\n");
