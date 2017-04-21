@@ -341,6 +341,7 @@ public class Astar {
             //calculate the cost of the shortest path using sum of g-values of path nodes
             pathCost = pathCost + current.getgValue();
 
+            //arrange the path using parent nodes ,while current node became the starting node
             while (current.parent != null) {
                 path.add(current.parent);
                 current = current.parent;
