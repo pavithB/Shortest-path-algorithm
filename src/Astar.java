@@ -375,6 +375,8 @@ public class Astar {
 //        StdDraw.setPenColor(Color.black);
 //        StdDraw.text(end.x, 10-end.y-1, "cost="+(int)fcost);
 
+
+        //return the shortest path
         return path;
 
 
