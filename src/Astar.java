@@ -389,15 +389,15 @@ public class Astar {
     }
 
 
+    //this method set h value, g value and f value of neighbour nodes
     public void HVneighbor(Node temp, Node current, double distance) {
 
 
-        double tempg = current.getgValue() + distance;
 
-        temp.setgValue(tempg);
 
         double di, dj, temph = 0;
 
+        //if user select Euclidean   calculate the h cost
         if (choice.equals("1")) {
 
             temph = (Math.sqrt(Math.pow((temp.getI() - end.getI()), 2) + Math.pow((temp.getJ() - end.getJ()), 2)));
@@ -418,7 +418,9 @@ public class Astar {
 
         }
 
+        double tempg = current.getgValue() + distance;
 
+        temp.setgValue(tempg);
         temp.sethValue(temph);
         temp.setfValue(tempg + temph);
 
