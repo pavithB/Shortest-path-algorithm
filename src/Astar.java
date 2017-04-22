@@ -40,23 +40,33 @@ public class Astar {
     boolean isManhattan = true;
     static String choice;
 
+    /**
+     * this ShortestPAth method return the shortest path of a given matrix and this method need six parameters first is matrix(grid) that
+     * use to find the path, starting point i coordinates and j coordinates , end point i coordinates and j coordinates and finally
+     * user selected method that use to calculate the distance of the shortest path
+     **/
+    public ArrayList<Node> ShortestPath(boolean[][] matrix, int si, int sj, int ei, int ej, String choices) {
 
-    public ArrayList<Node> ShortestPath(boolean[][] matrix, int si, int sj, int ei, int ej,String choices) {
+/*create scanner object
+         Scanner sc = new Scanner(System.in);*/
 
-
-         Scanner sc = new Scanner(System.in);
+//initialize choice variable with user sekected method
         choice = choices;
-
+//if user select Euclidean   set diagonal distance and normal distance for next node
         switch (choice) {
             case "1":
                 diagonalDistance = 1.4;
                 normalDistance = 1.0;
                 break;
+
+//if user select Manhattan set diagonal distance and normal distance for next node
             case "2":
                 diagonalDistance = 2.0;
                 normalDistance = 1.0;
                 isManhattan = false;
                 break;
+
+//if user select Chebyshev set diagonal distance and normal distance for next node
             case "3":
                 diagonalDistance = 1.0;
                 normalDistance = 1.0;
@@ -67,37 +77,34 @@ public class Astar {
         }
 
 
-
-
+//to get the nano time of the algorithm
         long starttime = System.nanoTime();
+
+//        initialize size variable with the size of the grid
         int size = matrix.length;
 
-
+//initialise the start node of the matrix
         start = new Node(si, sj);
+
+//        initialize the end node of the grid(matrix)
         end = new Node(ei, ej);
 
 
-        // The grid that is used to store nodes
+//           The grid that is used to store nodes , and initialize the size of the grid
 
         nodeGrid = new Node[size][size];
 
 
-        // Creating nodes and finding blocked cells in matrix and mapping accordingly to our grid
-
+//         Creating nodes and finding blocked cells in matrix and mapping accordingly to our grid
+//          this for loops iterate through the every node of the grid and initialize them as blocked or not
         for (int i = 0; i < size; ++i) {
             for (int j = 0; j < size; ++j) {
 
 
                 nodeGrid[i][j] = new Node(i, j);
                 if (matrix[i][j] == false) {
+//                    node set as a blocked node because it's a unreachable square
                     nodeGrid[i][j].setBlocked(true);
-                    //calculate the f value and set hvalue
-//                    int di = i - end.getI();
-//                    int dj = j - end.getJ();
-//                    double heuristic = 1 * (di+dj);
-//
-//                    nodeGrid[i][j].sethValue(heuristic);
-
 
                 }
 
@@ -105,7 +112,7 @@ public class Astar {
         }
 
 
-        // setting start distance to 0.
+        // setting start node g cost . h cost and f cost to 0.
         // All other nodes will have infinity distance at the beginning
         start.setfValue(0);
         start.setgValue(0);
@@ -123,13 +130,6 @@ public class Astar {
         Queue<Node> openList = new PriorityQueue<>(size, adjacencyComparator);
 
 
-//        int distart = Math.abs(si - ei);
-//        int djstart = Math.abs(sj - ej);
-//
-//        double temphstart = 1 * (distart+djstart);
-//
-//        temp.sethValue(temphstart);
-//        temp.setfValue(temphstart);
         openList.add(start);
 
         while (openList.size() > 0) {
@@ -187,7 +187,7 @@ public class Astar {
             }
 
             // Left
-            if (current.getJ() - 1 > 0) {
+            if (current.getJ() - 1 >= 0) {
                 temp = nodeGrid[current.getI()][current.getJ() - 1];
                 if (!temp.visited && !temp.blocked && temp.getfValue() > current.getfValue() + normalDistance) {
 
@@ -293,7 +293,7 @@ public class Astar {
             System.out.println("\n\t\t\t\tT O T A L _ C O S T : " + pathCost);
             System.out.println("\n******************************************************************************************************************");
 
-            long spentTime = (System.nanoTime() - starttime) ;
+            long spentTime = (System.nanoTime() - starttime);
             StdOut.println("\t\t*time taken to evaluate the shortest path  = " + spentTime + "ns");
         } else {
             System.out.println("******************************************************************************************************************");
