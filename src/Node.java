@@ -7,13 +7,21 @@ public class Node {
 
 
     private int i;
+
     private int j;
+
     private double hValue;
+
     private double gValue;
+
     private double fValue = Integer.MAX_VALUE;
+
     //    double distance = Integer.MAX_VALUE;
+
     Node parent = null;
+
     boolean visited;
+
     boolean blocked;
 
 

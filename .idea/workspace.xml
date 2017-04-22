@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11b43a4e-f3e3-4e09-b47d-c87ced1d25ab" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/algo cw/PathFindingOnSquaredGrid.class" afterPath="$PROJECT_DIR$/out/production/algo cw/PathFindingOnSquaredGrid.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Astar.java" afterPath="$PROJECT_DIR$/src/Astar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PathFindingOnSquaredGrid.java" afterPath="$PROJECT_DIR$/src/PathFindingOnSquaredGrid.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Node.java" afterPath="$PROJECT_DIR$/src/Node.java" />
     </list>
     <ignored path="AlgoCW.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,31 +35,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Astar.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Astar.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Astar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
+            <state relative-caret-position="255">
+              <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Comparator.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_77/src.zip!/java/util/Comparator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1360">
-              <caret line="108" column="17" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Node.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Node.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+            <state relative-caret-position="373">
+              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -91,10 +79,10 @@
         <option value="$PROJECT_DIR$/src/Dijkstar.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Dijkstra.java" />
-        <option value="$PROJECT_DIR$/src/Node.java" />
         <option value="$PROJECT_DIR$/src/test.java" />
         <option value="$PROJECT_DIR$/src/PathFindingOnSquaredGrid.java" />
         <option value="$PROJECT_DIR$/src/Astar.java" />
+        <option value="$PROJECT_DIR$/src/Node.java" />
       </list>
     </option>
   </component>
@@ -746,14 +734,7 @@
       <workItem from="1492800659347" duration="7473000" />
       <workItem from="1492842758877" duration="8081000" />
       <workItem from="1492870962840" duration="3505000" />
-      <workItem from="1492887559885" duration="928000" />
-    </task>
-    <task id="LOCAL-00003" summary="add a switch case to choose the method to calculate the distance">
-      <created>1490819070185</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1490819070185</updated>
+      <workItem from="1492887559885" duration="1824000" />
     </task>
     <task id="LOCAL-00004" summary="complete the adding swith case to choose distnce method">
       <created>1490819127914</created>
@@ -1091,11 +1072,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491912460182</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="fixed the bug on most left column">
+      <created>1492896264520</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1492896264521</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="175076000" />
+    <option name="totallyTimeSpent" value="175972000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1109,7 +1097,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5232936" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16901408" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1167,7 +1155,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change colors&#10;" />
     <MESSAGE value="change  the sze of  the matrix" />
     <MESSAGE value="add a switch case to choose the method to calculate the distance" />
     <MESSAGE value="complete the adding swith case to choose distnce method" />
@@ -1192,7 +1179,8 @@
     <MESSAGE value="finalize the code with only astar" />
     <MESSAGE value="finalize the code with only astar new" />
     <MESSAGE value="commenting" />
-    <option name="LAST_COMMIT_MESSAGE" value="commenting" />
+    <MESSAGE value="fixed the bug on most left column" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed the bug on most left column" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1480,14 +1468,6 @@
     <entry file="file://$PROJECT_DIR$/src/Dijkstra.java" />
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/test.java" />
-    <entry file="file://$PROJECT_DIR$/src/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PathFindingOnSquaredGrid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1513,8 +1493,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Astar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
+        <state relative-caret-position="255">
+          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
           <folding />
         </state>
       </provider>
