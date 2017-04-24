@@ -341,7 +341,7 @@ public class PathFindingOnSquaredGrid {
             for (Node dd : testarray) {
 
                 try {
-                    TimeUnit.MILLISECONDS.sleep(100);
+                    TimeUnit.MILLISECONDS.sleep(50);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

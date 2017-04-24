@@ -29,8 +29,8 @@
       <file leaf-file-name="PathFindingOnSquaredGrid.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PathFindingOnSquaredGrid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="307" column="94" selection-start-line="307" selection-start-column="94" selection-end-line="307" selection-end-column="94" />
+            <state relative-caret-position="17">
+              <caret line="179" column="0" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -748,7 +748,7 @@
       <workItem from="1492842758877" duration="8081000" />
       <workItem from="1492870962840" duration="3505000" />
       <workItem from="1492887559885" duration="9714000" />
-      <workItem from="1493003850640" duration="18179000" />
+      <workItem from="1493003850640" duration="18193000" />
     </task>
     <task id="LOCAL-00038" summary="commenting">
       <created>1492618822685</created>
@@ -854,13 +854,6 @@
       <option name="presentableId" value="LOCAL-00053" />
       <option name="project" value="LOCAL" />
       <updated>1492897273841</updated>
-    </task>
-    <task id="LOCAL-00090" summary="commenting ( date* 2017/ 4/ 23 )">
-      <created>1492296836291</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1492296836291</updated>
     </task>
     <task id="LOCAL-00091" summary="commenting ( date* 2017/ 4/ 23 )">
       <created>1492296853953</created>
@@ -1093,11 +1086,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493038562162</updated>
     </task>
-    <option name="localTasksCounter" value="124" />
+    <task id="LOCAL-00124" summary="fixed error while select methodology  done">
+      <created>1493038584839</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1493038584840</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202041000" />
+    <option name="totallyTimeSpent" value="202055000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1169,7 +1169,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="complete dijkstar class" />
     <MESSAGE value="add a variable to change the grid size easily" />
     <MESSAGE value="display cordinants in the generated squares" />
     <MESSAGE value="try to add a text on the end node , displaing the total cost" />
@@ -1194,7 +1193,8 @@
     <MESSAGE value="fixed error while select methodology" />
     <MESSAGE value="fixed error while select methodology  --&gt; change while loop into do while" />
     <MESSAGE value="fixed error while select methodology  --&gt;change cli" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed error while select methodology  --&gt;change cli" />
+    <MESSAGE value="fixed error while select methodology  done" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed error while select methodology  done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1549,8 +1549,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PathFindingOnSquaredGrid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="307" column="94" selection-start-line="307" selection-start-column="94" selection-end-line="307" selection-end-column="94" />
+        <state relative-caret-position="17">
+          <caret line="179" column="0" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
