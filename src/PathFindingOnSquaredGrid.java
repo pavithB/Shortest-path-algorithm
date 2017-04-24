@@ -177,7 +177,7 @@ public class PathFindingOnSquaredGrid {
     // test client
     public static void main(String[] args) {
 
-
+//this is the main loop of the program this loop until user press  0 and chose exit
         while (true) {
             //start of the main method
             System.out.println("******************************************************************************************************************");
@@ -187,9 +187,12 @@ public class PathFindingOnSquaredGrid {
 //get user value to set the size of the grid and set it
 
             Scanner in = new Scanner(System.in);
+            //to verify that user enter valid number for grid
             boolean isSize = false;
+            //to verify user enter valid number for ratio of the blocked cells in the grid
             boolean isRatio = false;
 
+            //
             while (!isSize) {
                 System.out.println("\nE N T E R _ T H E _ S I Z E _ O F _ T H E _ G R I D :");
                 nValue = in.nextInt();

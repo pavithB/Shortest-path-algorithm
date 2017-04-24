@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11b43a4e-f3e3-4e09-b47d-c87ced1d25ab" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/algo cw/PathFindingOnSquaredGrid.class" afterPath="$PROJECT_DIR$/out/production/algo cw/PathFindingOnSquaredGrid.class" />
+    <list default="true" id="11b43a4e-f3e3-4e09-b47d-c87ced1d25ab" name="Default" comment="reduce the drawiing time">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PathFindingOnSquaredGrid.java" afterPath="$PROJECT_DIR$/src/PathFindingOnSquaredGrid.java" />
     </list>
@@ -29,8 +28,8 @@
       <file leaf-file-name="PathFindingOnSquaredGrid.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PathFindingOnSquaredGrid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="179" column="0" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
+            <state relative-caret-position="374">
+              <caret line="194" column="14" selection-start-line="194" selection-start-column="14" selection-end-line="194" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -748,7 +747,7 @@
       <workItem from="1492842758877" duration="8081000" />
       <workItem from="1492870962840" duration="3505000" />
       <workItem from="1492887559885" duration="9714000" />
-      <workItem from="1493003850640" duration="18193000" />
+      <workItem from="1493003850640" duration="18943000" />
     </task>
     <task id="LOCAL-00038" summary="commenting">
       <created>1492618822685</created>
@@ -854,13 +853,6 @@
       <option name="presentableId" value="LOCAL-00053" />
       <option name="project" value="LOCAL" />
       <updated>1492897273841</updated>
-    </task>
-    <task id="LOCAL-00091" summary="commenting ( date* 2017/ 4/ 23 )">
-      <created>1492296853953</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1492296853953</updated>
     </task>
     <task id="LOCAL-00092" summary="commenting ( date* 2017/ 4/ 23 )">
       <created>1492296864247</created>
@@ -1093,11 +1085,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493038584840</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="reduce the drawiing time">
+      <created>1493038606402</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1493038606402</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202055000" />
+    <option name="totallyTimeSpent" value="202805000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1169,7 +1168,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add a variable to change the grid size easily" />
     <MESSAGE value="display cordinants in the generated squares" />
     <MESSAGE value="try to add a text on the end node , displaing the total cost" />
     <MESSAGE value="remove last change" />
@@ -1194,7 +1192,8 @@
     <MESSAGE value="fixed error while select methodology  --&gt; change while loop into do while" />
     <MESSAGE value="fixed error while select methodology  --&gt;change cli" />
     <MESSAGE value="fixed error while select methodology  done" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed error while select methodology  done" />
+    <MESSAGE value="reduce the drawiing time" />
+    <option name="LAST_COMMIT_MESSAGE" value="reduce the drawiing time" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1549,8 +1548,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PathFindingOnSquaredGrid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="179" column="0" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
+        <state relative-caret-position="374">
+          <caret line="194" column="14" selection-start-line="194" selection-start-column="14" selection-end-line="194" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
