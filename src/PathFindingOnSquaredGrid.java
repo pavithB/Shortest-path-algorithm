@@ -287,6 +287,7 @@ public class PathFindingOnSquaredGrid {
             String choices = "";
             System.out.println("******************************************************************************************************************");
             boolean isMethod ;
+
             do{
                 isMethod = false;
                 System.out.println("\n\n\t\tC H O O S E _ A _ M E T R I C _ F O R _ C A L C U L A T E _ T H E _ D I S T A N C E: \n\n\t\t\t\t\t1)Euclidean distance \n\n\t\t\t\t\t2)Manhattan distance\n\n\t\t\t\t\t3)Chebyshev distance\n");
@@ -304,7 +305,7 @@ public class PathFindingOnSquaredGrid {
                         choices = "3";
                         break;
                     default:
-                        System.out.println("\n\t\t\t\t P L E A S E _ C H O SE _ O N E _ F R O M _ B E L O W");
+                        System.out.println("\n\t\t\t\t I N V A L I D _ S E L E C T I O N * ");
                         isMethod=true;
                         break;
                 }
