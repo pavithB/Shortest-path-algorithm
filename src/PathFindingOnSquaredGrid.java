@@ -18,21 +18,19 @@ import java.util.concurrent.TimeUnit;
 
 public class PathFindingOnSquaredGrid {
 
-//initial value for grid (n*n)
-    static  int nValue = 10;
+    //initial value for grid (n*n)
+    static int nValue = 10;
     //initial size for block nodes ratio
-    static  double ratio = 0.6;
+    static double ratio = 0.6;
 //    static final boolean textCordinates = true;
 
     // given an N-by-N matrix of open cells, return an N-by-N matrix
     // of cells reachable from the top
 
-//generate grid matrix with black and white(block and non-block) cells
+    //generate grid matrix with black and white(block and non-block) cells
     static boolean[][] randomlyGenMatrix;
-//this variable to get and store the distance calculation method
+    //this variable to get and store the distance calculation method
     static String choice;
-
-
 
 
     public static boolean[][] flow(boolean[][] open) {
@@ -110,12 +108,12 @@ public class PathFindingOnSquaredGrid {
         for (int i = 0; i < N; i++)
             for (int j = 0; j < N; j++)
                 if (a[i][j] == which) {
-                    if(nValue>=15 && nValue<22){
-                        StdDraw.setFont(new Font("TimesRoman", Font.BOLD , 8));
+                    if (nValue >= 15 && nValue < 22) {
+                        StdDraw.setFont(new Font("TimesRoman", Font.BOLD, 8));
                         StdDraw.text(j, N - i - 1, "(" + i + "," + j + ")");
                     }
-                    if (nValue<15) {
-                        StdDraw.setFont(new Font("TimesRoman", Font.BOLD , 10));
+                    if (nValue < 15) {
+                        StdDraw.setFont(new Font("TimesRoman", Font.BOLD, 10));
                         StdDraw.text(j, N - i - 1, "(" + i + "," + j + ")");
                     }
                     StdDraw.square(j, N - i - 1, .5);
@@ -190,25 +188,25 @@ public class PathFindingOnSquaredGrid {
 
             Scanner in = new Scanner(System.in);
             boolean isSize = false;
-            boolean isRatio =  false;
+            boolean isRatio = false;
 
-            while(!isSize) {
+            while (!isSize) {
                 System.out.println("\nE N T E R _ T H E _ S I Z E _ O F _ T H E _ G R I D :");
                 nValue = in.nextInt();
-                if(nValue>1){
-                    isSize=true;
-                }else{
+                if (nValue > 1) {
+                    isSize = true;
+                } else {
                     System.out.println("\n\tI N V A L I D _ I N P U T ");
                 }
 
             }
 
-            while(!isRatio) {
+            while (!isRatio) {
                 System.out.println("\nE N T E R _ T H E _ B L O C K E D _ C E L L _ R A T I O :( between 0 & 1 )");
                 ratio = in.nextDouble();
-                if(ratio>=0 && ratio<=1){
-                    isRatio=true;
-                }else{
+                if (ratio >= 0 && ratio <= 1) {
+                    isRatio = true;
+                } else {
                     System.out.println("\n\tI N V A L I D _ I N P U T _ P L E A S E _ E N T E R _N U M B E R _ B E T W E E N _ 0 _ AND _ 1  ");
                 }
 
@@ -286,19 +284,21 @@ public class PathFindingOnSquaredGrid {
 
             inputCount = 0;
 
-            String choices = "" ;
+            String choices = "";
             System.out.println("******************************************************************************************************************");
-                System.out.println("\n\n\t\tC H O O S E _ A _ M E T R I C _ F O R _ C A L C U L A T E _ T H E _ D I S T A N C E: \n\n\t\t\t\t\t1)Euclidean distance \n\n\t\t\t\t\t2)Manhattan distance\n\n\t\t\t\t\t3)Chebyshev distance\n");
+            boolean isMethod;
+            while()
+            System.out.println("\n\n\t\tC H O O S E _ A _ M E T R I C _ F O R _ C A L C U L A T E _ T H E _ D I S T A N C E: \n\n\t\t\t\t\t1)Euclidean distance \n\n\t\t\t\t\t2)Manhattan distance\n\n\t\t\t\t\t3)Chebyshev distance\n");
             choice = in.next();
             switch (choice) {
                 case "1":
-                    choices="1";
+                    choices = "1";
                     break;
                 case "2":
-                    choices="2";
+                    choices = "2";
                     break;
                 case "3":
-                    choices="3";
+                    choices = "3";
 
                     break;
                 default:
@@ -321,7 +321,7 @@ public class PathFindingOnSquaredGrid {
 
 //create path array and make retunr the paths
             Stopwatch timerFlow = new Stopwatch();
-            ArrayList<Node> path = testing.ShortestPath(randomlyGenMatrix, Ai, Aj, Bi, Bj,choices);
+            ArrayList<Node> path = testing.ShortestPath(randomlyGenMatrix, Ai, Aj, Bi, Bj, choices);
 //        ArrayList<Node> path = new Astar().ShortestPath(randomlyGenMatrix, Ai, Aj, Bi, Bj);
 
             ArrayList<Node> testarray = testing.testing();
