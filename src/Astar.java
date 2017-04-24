@@ -125,6 +125,7 @@ public class Astar {
         //this will order the priority queue acceding order according to their f values
         Comparator<Node> adjacencyComparator = (left, right) -> {
             if (left.getfValue() > (right.getfValue())) {
+//                if (right.getfValue() > (left.getfValue())) {
                 return 1;
             }
             return -1;
@@ -142,6 +143,7 @@ public class Astar {
 
             //remove the head element (first element ) of the queue and assign that node to current variable
             Node current = openList.remove();
+            //            Node current = openList.peek();
 
             //this variable to store neighbour nodes temporally
             Node temp;
@@ -172,7 +174,7 @@ public class Astar {
 
                     // Top Left
                     //assign top left value as the temp node (temporally neighbour)
-                    if (current.getJ() - 1 > 0) {
+                    if (current.getJ() - 1 >= 0) {
                         temp = nodeGrid[current.getI() - 1][current.getJ() - 1];
                         //check that temp node is already visited , is it a blocked node or its old f value is less than new f value if it is skip that node
                         //if it's not visited , not blocked or old f value not less than new f value then check and add that node to openlist
@@ -313,6 +315,8 @@ public class Astar {
 
             //remove current node from the openList queue
             closedList.add(current);
+
+            openList.remove(current);
 
             //check that destination node is found or not , if found break the while loop
             //if destination(finish) node isn't found yet continue the while loop

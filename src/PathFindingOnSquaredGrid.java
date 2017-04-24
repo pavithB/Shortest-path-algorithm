@@ -21,7 +21,7 @@ public class PathFindingOnSquaredGrid {
 //initial value for grid (n*n)
     static  int nValue = 10;
     //initial size for block nodes ratio
-    static final double ratio = 0.6;
+    static  double ratio = 0.6;
 //    static final boolean textCordinates = true;
 
     // given an N-by-N matrix of open cells, return an N-by-N matrix
@@ -189,8 +189,30 @@ public class PathFindingOnSquaredGrid {
 //get user value to set the size of the grid and set it
 
             Scanner in = new Scanner(System.in);
-            System.out.println("\nE N T E R _ T H E _ S I Z E _ O F _ T H E _ G R I D :");
-            nValue = in.nextInt();
+            boolean isSize = false;
+            boolean isRatio =  false;
+
+            while(isSize) {
+                System.out.println("\nE N T E R _ T H E _ S I Z E _ O F _ T H E _ G R I D :");
+                nValue = in.nextInt();
+                if(nValue<1){
+                    isSize=true;
+                }else{
+                    System.out.println("\n\tI N V A L I D _ I N P U T ");
+                }
+
+            }
+
+            while(isRatio) {
+                System.out.println("\nE N T E R _ T H E _ B L O C K E D _ C E L L _ R A T I O :( between 0 & 1 )");
+                ratio = in.nextDouble();
+                if(ratio>=0 && ratio<=1){
+                    isRatio=true;
+                }else{
+                    System.out.println("\n\tI N V A L I D _ I N P U T _ P L E A S E _ E N T E R _N U M B E R _  B E T W E E N _ 0 _ AND _ 1  ");
+                }
+
+            }
 
             // boolean[][] open = StdArrayIO.readBoolean2D();
 
@@ -347,7 +369,7 @@ public class PathFindingOnSquaredGrid {
 
                 }
             }
-            StdOut.println("\t\t*time taken to evaluate the shortest path  = " + timerFlow.elapsedTime() + "ms");
+            StdOut.println("\t\t*time taken to find and draw the shortest path  = " + timerFlow.elapsedTime() + "ms");
             showfinal(randomlyGenMatrix, true, Ai, Aj, Bi, Bj);
 
             System.out.println("\n\n\t\tP R E S S _ 0 _ T O _ E X I T");
@@ -355,6 +377,7 @@ public class PathFindingOnSquaredGrid {
             System.out.println("\n\n\t\tP R E S S _ A N Y _ (E X C E P T _ 0) _ T O _ C O N T I N U E");
 
             String commnd = in.next();
+            StdDraw.setPenRadius(0.002);
             StdDraw.clear();
             if (commnd.equals("0")) {
                 System.exit(0);
