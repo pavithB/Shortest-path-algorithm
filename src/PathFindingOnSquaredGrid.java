@@ -192,10 +192,10 @@ public class PathFindingOnSquaredGrid {
             boolean isSize = false;
             boolean isRatio =  false;
 
-            while(isSize) {
+            while(!isSize) {
                 System.out.println("\nE N T E R _ T H E _ S I Z E _ O F _ T H E _ G R I D :");
                 nValue = in.nextInt();
-                if(nValue<1){
+                if(nValue>1){
                     isSize=true;
                 }else{
                     System.out.println("\n\tI N V A L I D _ I N P U T ");
@@ -203,13 +203,13 @@ public class PathFindingOnSquaredGrid {
 
             }
 
-            while(isRatio) {
+            while(!isRatio) {
                 System.out.println("\nE N T E R _ T H E _ B L O C K E D _ C E L L _ R A T I O :( between 0 & 1 )");
                 ratio = in.nextDouble();
                 if(ratio>=0 && ratio<=1){
                     isRatio=true;
                 }else{
-                    System.out.println("\n\tI N V A L I D _ I N P U T _ P L E A S E _ E N T E R _N U M B E R _  B E T W E E N _ 0 _ AND _ 1  ");
+                    System.out.println("\n\tI N V A L I D _ I N P U T _ P L E A S E _ E N T E R _N U M B E R _ B E T W E E N _ 0 _ AND _ 1  ");
                 }
 
             }

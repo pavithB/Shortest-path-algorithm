@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11b43a4e-f3e3-4e09-b47d-c87ced1d25ab" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/algo cw/PathFindingOnSquaredGrid.class" afterPath="$PROJECT_DIR$/out/production/algo cw/PathFindingOnSquaredGrid.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Astar.java" afterPath="$PROJECT_DIR$/src/Astar.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PathFindingOnSquaredGrid.java" afterPath="$PROJECT_DIR$/src/PathFindingOnSquaredGrid.java" />
     </list>
     <ignored path="AlgoCW.iws" />
@@ -29,8 +29,8 @@
       <file leaf-file-name="PathFindingOnSquaredGrid.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PathFindingOnSquaredGrid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="211" column="111" selection-start-line="211" selection-start-column="111" selection-end-line="211" selection-end-column="111" />
+            <state relative-caret-position="68">
+              <caret line="197" column="26" selection-start-line="197" selection-start-column="26" selection-end-line="197" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -748,7 +748,7 @@
       <workItem from="1492842758877" duration="8081000" />
       <workItem from="1492870962840" duration="3505000" />
       <workItem from="1492887559885" duration="9714000" />
-      <workItem from="1493003850640" duration="17984000" />
+      <workItem from="1493003850640" duration="18062000" />
     </task>
     <task id="LOCAL-00038" summary="commenting">
       <created>1492618822685</created>
@@ -854,13 +854,6 @@
       <option name="presentableId" value="LOCAL-00053" />
       <option name="project" value="LOCAL" />
       <updated>1492897273841</updated>
-    </task>
-    <task id="LOCAL-00085" summary="commenting ( date* 2017/ 4/ 23 )">
-      <created>1492208813639</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1492208813639</updated>
     </task>
     <task id="LOCAL-00086" summary="commenting ( date* 2017/ 4/ 23 )">
       <created>1492209852109</created>
@@ -1093,11 +1086,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492818441912</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <task id="LOCAL-00119" summary="change cli interface">
+      <created>1493038421229</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1493038421236</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="201846000" />
+    <option name="totallyTimeSpent" value="201924000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1169,7 +1169,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add a switch case to choose the method to calculate the distance" />
     <MESSAGE value="complete the adding swith case to choose distnce method" />
     <MESSAGE value="fix error while calculating distnce" />
     <MESSAGE value="done with asking what method to calculate the distance" />
@@ -1194,7 +1193,8 @@
     <MESSAGE value="commenting" />
     <MESSAGE value="fixed the bug on most left column" />
     <MESSAGE value="commenting ( date* 2017/ 4/ 23 )" />
-    <option name="LAST_COMMIT_MESSAGE" value="commenting ( date* 2017/ 4/ 23 )" />
+    <MESSAGE value="change cli interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="change cli interface" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1549,8 +1549,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PathFindingOnSquaredGrid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="211" column="111" selection-start-line="211" selection-start-column="111" selection-end-line="211" selection-end-column="111" />
+        <state relative-caret-position="68">
+          <caret line="197" column="26" selection-start-line="197" selection-start-column="26" selection-end-line="197" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
