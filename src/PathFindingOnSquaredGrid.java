@@ -286,26 +286,24 @@ public class PathFindingOnSquaredGrid {
 
             String choices = "";
             System.out.println("******************************************************************************************************************");
-            boolean isMethod;
-            while()
-            System.out.println("\n\n\t\tC H O O S E _ A _ M E T R I C _ F O R _ C A L C U L A T E _ T H E _ D I S T A N C E: \n\n\t\t\t\t\t1)Euclidean distance \n\n\t\t\t\t\t2)Manhattan distance\n\n\t\t\t\t\t3)Chebyshev distance\n");
-            choice = in.next();
-            switch (choice) {
-                case "1":
-                    choices = "1";
-                    break;
-                case "2":
-                    choices = "2";
-                    break;
-                case "3":
-                    choices = "3";
-
-                    break;
-                default:
-
-                    break;
-            }
-
+            boolean isMethod = false;
+            do{
+                System.out.println("\n\n\t\tC H O O S E _ A _ M E T R I C _ F O R _ C A L C U L A T E _ T H E _ D I S T A N C E: \n\n\t\t\t\t\t1)Euclidean distance \n\n\t\t\t\t\t2)Manhattan distance\n\n\t\t\t\t\t3)Chebyshev distance\n");
+                choice = in.next();
+                switch (choice) {
+                    case "1":
+                        choices = "1";
+                        break;
+                    case "2":
+                        choices = "2";
+                        break;
+                    case "3":
+                        choices = "3";
+                        break;
+                    default:
+                        break;
+                }
+            }while(isMethod);
             // THIS IS AN EXAMPLE ONLY ON HOW TO USE THE JAVA INTERNAL WATCH
             // Stop the clock ticking in order to capture the time being spent on inputting the coordinates
             // You should position this command accordingly in order to perform the algorithmic analysis
