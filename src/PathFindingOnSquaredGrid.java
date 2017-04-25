@@ -192,7 +192,7 @@ public class PathFindingOnSquaredGrid {
             //to verify user enter valid number for ratio of the blocked cells in the grid
             boolean isRatio = false;
 
-            //
+            //loop until user enter valid number for size of the grid
             while (!isSize) {
                 System.out.println("\nE N T E R _ T H E _ S I Z E _ O F _ T H E _ G R I D :");
                 nValue = in.nextInt();
@@ -204,6 +204,7 @@ public class PathFindingOnSquaredGrid {
 
             }
 
+            //this loop continue until user enter valid double value between 0 and 1
             while (!isRatio) {
                 System.out.println("\nE N T E R _ T H E _ B L O C K E D _ C E L L _ R A T I O :( between 0 & 1 )");
                 ratio = in.nextDouble();
@@ -290,7 +291,7 @@ public class PathFindingOnSquaredGrid {
             String choices = "";
             System.out.println("******************************************************************************************************************");
             boolean isMethod ;
-
+//this do while loop get valid selection from user for distance calculation methodology
             do{
                 isMethod = false;
                 System.out.println("\n\n\t\tC H O O S E _ A _ M E T R I C _ F O R _ C A L C U L A T E _ T H E _ D I S T A N C E: \n\n\t\t\t\t\t1)Euclidean distance \n\n\t\t\t\t\t2)Manhattan distance\n\n\t\t\t\t\t3)Chebyshev distance\n");
@@ -341,25 +342,32 @@ public class PathFindingOnSquaredGrid {
 //revers the path arraylist elements
             Collections.reverse(path);
 
+            //print the nodes that added to the open list
             for (Node dd : testarray) {
 
+                //insert a timer to delay the drawing
                 try {
                     TimeUnit.MILLISECONDS.sleep(50);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
 
+                //draw method to color the squares
                 StdDraw.filledSquare(dd.getJ(), nValue - dd.getI() - 1, .5);
             }
             StdDraw.setPenColor(Color.RED);
+            //print the shortest path in the grid
             for (Node node : path) {
 
+                //add a timer
                 try {
                     TimeUnit.MILLISECONDS.sleep(100);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
 
+                //first node of the shortest path
+                //first nodes coordinates saved into two variables to draw a line with 2nd node coordinates
                 if (i == 0) {
                     i++;
                     prey = node.getJ();
@@ -368,6 +376,7 @@ public class PathFindingOnSquaredGrid {
 
 //                StdDraw.filledSquare(node.y, 10 - node.x - 1, .5);
 
+                    //set pen radius and draw the line
                     StdDraw.setPenRadius(0.01);
                     StdDraw.line(prey, nValue - prex - 1, node.getJ(), nValue - node.getI() - 1);
 
@@ -383,8 +392,11 @@ public class PathFindingOnSquaredGrid {
 
             System.out.println("\n\n\t\tP R E S S _ A N Y _ (E X C E P T _ 0) _ T O _ C O N T I N U E");
 
+            //get user input to continue or exit from the programme
             String commnd = in.next();
+            //reset pen radius
             StdDraw.setPenRadius(0.002);
+            //clear the grid
             StdDraw.clear();
             if (commnd.equals("0")) {
                 System.exit(0);
@@ -392,69 +404,7 @@ public class PathFindingOnSquaredGrid {
 
         }
 
-/**        this for find shortest path using dijkstar algorithm + visualization
- *
- *            Dijkstra testing = new Dijkstra();
 
- ArrayList<Dijkstra.Node> path = testing.distance(randomlyGenMatrix, Ai, Aj, Bi, Bj);
- //        ArrayList<Node> path = new Astar().ShortestPath(randomlyGenMatrix, Ai, Aj, Bi, Bj);
- StdOut.println("time to find the shortest path  = " + timerFlow.elapsedTime());
- ArrayList<Dijkstra.Node> testarray = testing.testing();
- StdDraw.setPenColor(Color.BLUE);
-
- int i = 0;
- int prex = 0;
- int prey = 0;
-
- Collections.reverse(path);
-
- for (Dijkstra.Node dd : testarray) {
-
- try {
- TimeUnit.MILLISECONDS.sleep(10);
- } catch (InterruptedException e) {
- e.printStackTrace();
- }
-
- StdDraw.filledSquare(dd.getJ(), nValue - dd.getI() - 1, .5);
- }
- StdDraw.setPenColor(Color.RED);
- for (Dijkstra.Node node : path) {
-
- try {
- TimeUnit.MILLISECONDS.sleep(100);
- } catch (InterruptedException e) {
- e.printStackTrace();
- }
-
- if (i == 0) {
- i++;
- prey = node.getJ();
- prex = node.getI();
- } else {
-
- //                StdDraw.filledSquare(node.y, 10 - node.x - 1, .5);
-
- StdDraw.setPenRadius(0.01);
- StdDraw.line(prey, nValue - prex - 1, node.getJ(), nValue - node.getI() - 1);
-
- prey = node.getJ();
- prex = node.getI();
-
- }
- }
-
- System.out.println("\n\n\tpress 0 to exit ");
-
- System.out.println("\n\n\tpress 0 natuwa wena ekk to continue ");
-
- String commnd = in.next();
- StdDraw.clear();
- if (commnd.equals("0")){
- System.exit(0);
- }
-
- */
 
     }
 
